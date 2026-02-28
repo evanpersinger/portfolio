@@ -41,6 +41,51 @@
   line-height: 1.6;
 }
 
+.hero-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hero-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s;
+  border: 2px solid var(--text-primary);
+}
+
+.hero-link:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.hero-icon-link {
+  padding: 8px;
+  border: none;
+  background: none;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.location-flag {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin: 0 6px;
+  object-fit: contain;
+  display: inline-block;
+  flex-shrink: 0;
+  image-rendering: crisp-edges;
+}
+
 .hero-buttons {
   display: flex;
   gap: 20px;
