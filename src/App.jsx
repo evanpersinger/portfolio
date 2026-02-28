@@ -1,7 +1,8 @@
 import React from 'react'
 import Hero from './components/Hero'
-import Skills from './components/Skills'
+import Education from './components/Education'
 import Experience from './components/Experience'
+import Skills from './components/Skills'
 import './App.css'
 
 function App() {
@@ -9,7 +10,10 @@ function App() {
     <div className="App">
       <main>
         <Hero />
-        <Experience />
+        <div className="education-experience-container">
+          <Education />
+          <Experience />
+        </div>
         <Skills />
       </main>
     </div>

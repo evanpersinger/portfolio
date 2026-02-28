@@ -20,6 +20,22 @@ section {
   font-weight: 700;
 }
 
+.education-experience-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+@media (max-width: 1024px) {
+  .education-experience-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   section {
     padding: 60px 20px;
@@ -27,5 +43,9 @@ section {
   
   .section-title {
     font-size: 2rem;
+  }
+
+  .education-experience-container {
+    padding: 60px 20px;
   }
 }
