@@ -6,10 +6,11 @@ main {
   margin-top: 0;
 }
 
+/* Left alignment baseline: padding-left: 60px across all sections to align with profile pic */
 section {
-  padding: 80px 20px;
+  padding: 80px 80px 80px 60px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .section-title {
@@ -20,13 +21,14 @@ section {
   font-weight: 700;
 }
 
+/* Left alignment baseline: padding-left: 60px to align with hero profile pic */
 .education-experience-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 20px;
+  margin: 0;
+  padding: 80px 80px 80px 60px;
 }
 
 @media (max-width: 1024px) {

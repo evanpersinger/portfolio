@@ -1,18 +1,33 @@
+/* Left alignment baseline: padding-left: 60px to match all other sections */
 .hero {
   padding-top: 60px;
-  text-align: center;
+  padding-left: 60px !important;
+  padding-right: 80px !important;
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-left {
+  flex-shrink: 0;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: left;
 }
 
 .profile-image {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
   border: 3px solid var(--border-color);
 }
 
@@ -44,13 +59,11 @@
 .hero-links {
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 20px;
   padding: 16px 24px;
   border-radius: 12px;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
   border: 2px solid var(--text-primary);
 }
 
@@ -168,6 +181,21 @@
 }
 
 @media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .hero-right {
+    text-align: center;
+  }
+
+  .hero-links {
+    justify-content: center;
+    margin: 20px auto 0;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
