@@ -1,20 +1,19 @@
 import React from 'react'
-import { SiPython, SiR, SiPostgresql, SiJupyter, SiGit, SiDocker, SiAmazon, SiMysql, SiMongodb } from 'react-icons/si'
+import { SiPython, SiPostgresql, SiJupyter, SiGit, SiDocker, SiAmazon, SiMongodb, SiFastapi } from 'react-icons/si'
 import { FaDatabase } from 'react-icons/fa'
 import './Skills.css'
 
 function Skills() {
   const allSkills = [
     { name: 'Python', icon: SiPython },
-    { name: 'R', icon: SiR },
     { name: 'SQL', icon: FaDatabase },
     { name: 'Jupyter', icon: SiJupyter },
     { name: 'Git', icon: SiGit },
     { name: 'Docker', icon: SiDocker },
     { name: 'AWS', icon: SiAmazon },
     { name: 'PostgreSQL', icon: SiPostgresql },
-    { name: 'MySQL', icon: SiMysql },
-    { name: 'MongoDB', icon: SiMongodb }
+    { name: 'MongoDB', icon: SiMongodb },
+    { name: 'FastAPI', icon: SiFastapi }
   ]
 
   return (

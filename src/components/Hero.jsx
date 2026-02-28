@@ -22,10 +22,10 @@ function Hero() {
           </div>
           <div className="hero-links">
             <a href="/resume.pdf" className="hero-link">Resume</a>
-            <a href="https://github.com" className="hero-link hero-icon-link">
+            <a href="https://github.com" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer">
               <img src="/icons/Github_icon.png" alt="GitHub" className="social-icon" />
             </a>
-            <a href="https://linkedin.com" className="hero-link hero-icon-link">
+            <a href="https://linkedin.com" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer">
               <img src="/icons/linkedin_icon.jpg" alt="LinkedIn" className="social-icon" />
             </a>
             <a href="mailto:your-email@gmail.com" className="hero-link hero-icon-link">
