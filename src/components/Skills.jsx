@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiPython, SiR, SiPostgresql, SiJavascript, SiPytorch, SiJupyter, SiGit, SiDocker, SiAmazon, SiTableau, SiMysql, SiMongodb } from 'react-icons/si'
+import { SiPython, SiR, SiPostgresql, SiJupyter, SiGit, SiDocker, SiAmazon, SiMysql, SiMongodb } from 'react-icons/si'
 import { FaDatabase } from 'react-icons/fa'
 import './Skills.css'
 
@@ -8,13 +8,10 @@ function Skills() {
     { name: 'Python', icon: SiPython },
     { name: 'R', icon: SiR },
     { name: 'SQL', icon: FaDatabase },
-    { name: 'JavaScript', icon: SiJavascript },
-    { name: 'PyTorch', icon: SiPytorch },
     { name: 'Jupyter', icon: SiJupyter },
     { name: 'Git', icon: SiGit },
     { name: 'Docker', icon: SiDocker },
     { name: 'AWS', icon: SiAmazon },
-    { name: 'Tableau', icon: SiTableau },
     { name: 'PostgreSQL', icon: SiPostgresql },
     { name: 'MySQL', icon: SiMysql },
     { name: 'MongoDB', icon: SiMongodb }

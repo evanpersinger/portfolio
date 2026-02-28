@@ -14,18 +14,6 @@ function Experience() {
         'Collaborated with cross-functional teams to implement data-driven solutions',
         'Built automated reporting systems using Python and SQL'
       ]
-    },
-    {
-      title: 'Data Science Student',
-      company: 'Western University',
-      location: 'London, ON',
-      period: '2022 - Present',
-      description: [
-        'Studying statistical analysis, machine learning, and data visualization',
-        'Completed coursework in algorithms, databases, and statistical modeling',
-        'Participated in hackathons and data science competitions',
-        'Maintained strong academic standing while building practical skills'
-      ]
     }
   ]
 
