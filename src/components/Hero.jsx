@@ -1,6 +1,7 @@
 import React from 'react'
 import './Hero.css'
 import uwoIcon from '../../icons/uwo_icon.png'
+import biztrip_icon from '../../icons/biztrip_icon.png'
 
 function Hero() {
   return (
@@ -12,7 +13,7 @@ function Hero() {
         </h1>
         <div className="hero-info">
           <p className="hero-item">Data Science Student at Western University<img src={uwoIcon} alt="Western University" className="company-icon" /></p>
-          <p className="hero-item">Backend Engineering Intern at Biztrip AI<img src="/icons/biztrip_icon.jpg" alt="Biztrip AI" className="company-icon" /></p>
+          <p className="hero-item">Backend Engineering Intern at Biztrip AI<img src={biztrip_icon} alt="Biztrip AI" className="company-icon biztrip-icon" /></p>
           <p className="hero-item">San Francisco, CA <img src="/icons/Niners.png" alt="49ers" className="location-flag" /> <img src="/icons/USA_Flag.png" alt="US flag" className="location-flag" /></p>
           <p className="hero-item">London, ON <img src="/icons/Canadian_Flag.png" alt="Canadian flag" className="location-flag" /></p>
         </div>

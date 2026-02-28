@@ -105,8 +105,19 @@
 }
 
 .company-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-left: 8px;
+  object-fit: contain;
+  display: inline-block;
+  flex-shrink: 0;
+  image-rendering: crisp-edges;
+}
+
+.biztrip-icon {
+  width: 64px;
+  height: 64px;
   vertical-align: middle;
   margin-left: 8px;
   object-fit: contain;
