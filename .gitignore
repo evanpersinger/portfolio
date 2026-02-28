@@ -1,0 +1,20 @@
+# Sensitive files
+account.md
+portfolio_info.md
+*.env
+*.env.local
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production
+build/
+dist/
+
+# Misc
+.DS_Store
+*.log
+.vscode/
+.idea/
