@@ -104,6 +104,17 @@
   image-rendering: crisp-edges;
 }
 
+.company-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 8px;
+  object-fit: contain;
+  display: inline-block;
+  flex-shrink: 0;
+  image-rendering: crisp-edges;
+}
+
 .hero-buttons {
   display: flex;
   gap: 20px;

@@ -40,6 +40,15 @@
 .school {
   color: var(--text-primary);
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.school-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .location {
