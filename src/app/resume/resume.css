@@ -1,0 +1,74 @@
+.resume {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+.resume-actions {
+  margin-bottom: 32px;
+}
+
+.resume-back {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.resume-back:hover {
+  color: var(--text-primary);
+}
+
+.resume-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.resume-content h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 36px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resume-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 2px;
+}
+
+.resume-content p {
+  color: var(--text-secondary);
+  margin: 8px 0;
+}
+
+.resume-content ul {
+  padding-left: 22px;
+  margin: 8px 0;
+}
+
+.resume-content li {
+  color: var(--text-secondary);
+  margin: 4px 0;
+}
+
+.resume-content a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.resume-content a:hover {
+  color: var(--text-secondary);
+}
+
+.resume-content strong {
+  color: var(--text-primary);
+}
+
+.resume-content hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 20px 0;
+}

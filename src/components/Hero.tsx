@@ -20,7 +20,7 @@ function Hero() {
             <p className="hero-item">London, ON <img src="/icons/Canadian_Flag.png" alt="Canadian flag" className="location-flag" /></p>
           </div>
           <div className="hero-links">
-            <a href="/resume.pdf" className="hero-link">Resume</a>
+            <a href="/resume" className="hero-link">Resume</a>
             <a href="https://github.com" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer">
               <img src="/icons/Github_icon.png" alt="GitHub" className="social-icon" />
             </a>
