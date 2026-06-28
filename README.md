@@ -12,16 +12,26 @@ A modern, responsive portfolio website built with React and Vite.
 
 ## Getting Started
 
+This project uses [pnpm](https://pnpm.io/) as its package manager (pinned via the `packageManager` field in `package.json`).
+
+### Enable pnpm
+
+pnpm ships with Node.js via Corepack, no separate install needed:
+
+```bash
+corepack enable pnpm
+```
+
 ### Install Dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Run Development Server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 The site will be available at `http://localhost:5173`
@@ -29,13 +39,13 @@ The site will be available at `http://localhost:5173`
 ### Build for Production
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ### Preview Production Build
 
 ```bash
-npm run preview
+pnpm preview
 ```
 
 ## Customization
@@ -59,6 +69,7 @@ This site can be deployed to:
 - React
 - Vite
 - CSS3
+- pnpm (package manager)
 
 ## License
 
