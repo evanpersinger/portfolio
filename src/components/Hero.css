@@ -43,6 +43,13 @@
   font-weight: 700;
 }
 
+.hero-about {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
 .hero-info {
   display: flex;
   flex-direction: column;

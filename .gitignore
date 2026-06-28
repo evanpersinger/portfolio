@@ -18,3 +18,5 @@ dist/
 *.log
 .vscode/
 .idea/
+commands.md
+
