@@ -20,3 +20,8 @@ dist/
 .idea/
 commands.md
 
+# Next.js
+.next/
+next-env.d.ts
+*.tsbuildinfo
+

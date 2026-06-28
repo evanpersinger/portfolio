@@ -1,6 +1,6 @@
 # Evan Persinger - Data Science Portfolio
 
-A modern, responsive portfolio website built with React and Vite.
+A modern, responsive portfolio website built with Next.js, React, and TypeScript.
 
 ## Features
 
@@ -34,7 +34,7 @@ pnpm install
 pnpm dev
 ```
 
-The site will be available at `http://localhost:5173`
+The site will be available at `http://localhost:3000`
 
 ### Build for Production
 
@@ -42,18 +42,18 @@ The site will be available at `http://localhost:5173`
 pnpm build
 ```
 
-### Preview Production Build
+### Start Production Server
 
 ```bash
-pnpm preview
+pnpm start
 ```
 
 ## Customization
 
 1. Update personal information in the components
-2. Add your own projects in `Projects.jsx`
-3. Modify skills in `Skills.jsx`
-4. Update experience in `Experience.jsx`
+2. Add your own projects in `Projects.tsx`
+3. Modify skills in `Skills.tsx`
+4. Update experience in `Experience.tsx`
 5. Change color scheme in `src/index.css` (CSS variables)
 
 ## Deployment
@@ -66,8 +66,9 @@ This site can be deployed to:
 
 ## Tech Stack
 
+- Next.js (App Router)
 - React
-- Vite
+- TypeScript
 - CSS3
 - pnpm (package manager)
 
