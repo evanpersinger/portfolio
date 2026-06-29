@@ -28,7 +28,7 @@ section {
   gap: 40px;
   max-width: 1200px;
   margin: 0;
-  padding: 80px 80px 80px 60px;
+  padding: 0 80px 80px 60px;
 }
 
 @media (max-width: 1024px) {

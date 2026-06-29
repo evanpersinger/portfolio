@@ -10,14 +10,14 @@ function Skills() {
     { name: 'Jupyter', icon: SiJupyter },
     { name: 'Git', icon: SiGit },
     { name: 'Docker', icon: SiDocker },
-    { name: 'AWS', icon: FaAws },
+    { name: 'AWS Postgres', icon: FaAws },
     { name: 'PostgreSQL', icon: SiPostgresql },
     { name: 'FastAPI', icon: SiFastapi }
   ]
 
   return (
     <section id="technologies" className="skills">
-      <h2 className="section-title">Technologies</h2>
+      <h2 className="section-title">Tech Stack</h2>
       <div className="skill-tags">
         {allSkills.map((skill, index) => {
           const IconComponent = skill.icon

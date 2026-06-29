@@ -10,8 +10,8 @@ export default function Page() {
       <main>
         <Hero />
         <div className="education-experience-container">
-          <Education />
           <Experience />
+          <Education />
         </div>
         <Skills />
       </main>
