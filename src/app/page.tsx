@@ -12,8 +12,8 @@ export default function Page() {
         <div className="education-experience-container">
           <Experience />
           <Education />
+          <Skills />
         </div>
-        <Skills />
       </main>
     </div>
   )

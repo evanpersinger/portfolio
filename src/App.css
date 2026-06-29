@@ -24,11 +24,16 @@ section {
 /* Left alignment baseline: padding-left: 60px to align with hero profile pic */
 .education-experience-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1200px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  max-width: 1300px;
   margin: 0;
-  padding: 0 80px 80px 60px;
+  padding: 0 40px 80px 60px;
+}
+
+.education-experience-container > section {
+  padding: 0;
+  max-width: none;
 }
 
 @media (max-width: 1024px) {

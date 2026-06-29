@@ -12,7 +12,8 @@ function Experience() {
         'Built and maintained backend features in Python for the travel platform',
         'Designed and tested REST API endpoints backed by PostgreSQL',
         'Shipped containerized services with Docker in a team Git workflow'
-      ]
+      ],
+      technologies: ['Python', 'Docker', 'FastAPI', 'PostgreSQL']
     },
     {
       title: 'Data Science Intern',
@@ -23,7 +24,8 @@ function Experience() {
         'Developed machine learning models to optimize business operations',
         'Analyzed large datasets to extract actionable insights',
         'Built automated reporting systems using Python and SQL'
-      ]
+      ],
+      technologies: ['Python', 'FastAPI', 'AWS Postgres', 'PostgreSQL', 'SQL', 'Docker']
     }
   ]
 
@@ -46,6 +48,13 @@ function Experience() {
                   <li key={itemIndex}>{item}</li>
                 ))}
               </ul>
+              {exp.technologies && (
+                <div className="experience-tech">
+                  {exp.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="experience-tech-tag">{tech}</span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}

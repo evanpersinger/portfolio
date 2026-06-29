@@ -25,7 +25,7 @@ function Education() {
                 <span className="school">{edu.school}</span>
                 <span className="location">{edu.location}</span>
               </div>
-              <p className="major">Major: {edu.major}</p>
+              <p className="major">{edu.major}</p>
               <p className="graduation">{edu.graduation}</p>
             </div>
           </div>

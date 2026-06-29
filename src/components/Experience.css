@@ -73,6 +73,22 @@
   color: var(--text-secondary);
 }
 
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.experience-tech-tag {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border-color);
+}
+
 @media (max-width: 768px) {
   .timeline {
     padding-left: 30px;
