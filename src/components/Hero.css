@@ -121,7 +121,6 @@
   object-fit: contain;
   display: inline-block;
   flex-shrink: 0;
-  image-rendering: crisp-edges;
 }
 
 .company-icon {
@@ -132,7 +131,6 @@
   object-fit: contain;
   display: inline-block;
   flex-shrink: 0;
-  image-rendering: crisp-edges;
 }
 
 .biztrip-icon {
@@ -143,7 +141,6 @@
   object-fit: contain;
   display: inline-block;
   flex-shrink: 0;
-  image-rendering: crisp-edges;
 }
 
 .hero-buttons {

@@ -2,7 +2,7 @@
 
 Data Science Student · San Francisco Bay Area
 
-[Email](mailto:your-email@gmail.com) · [GitHub](https://github.com) · [LinkedIn](https://linkedin.com)
+[Email](mailto:your-email@gmail.com) · [GitHub](https://github.com) · [LinkedIn](https://www.linkedin.com/in/evanpersinger/)
 
 ---
 
