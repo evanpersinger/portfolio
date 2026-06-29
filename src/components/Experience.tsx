@@ -5,7 +5,7 @@ function Experience() {
   const experiences = [
     {
       title: 'Software Engineering Intern',
-      company: 'Biztrip AI Inc',
+      company: 'BizTrip AI',
       location: 'San Francisco, CA',
       period: 'January 2026 - Present',
       description: [
@@ -16,7 +16,7 @@ function Experience() {
     },
     {
       title: 'Data Science Intern',
-      company: 'Biztrip AI Inc',
+      company: 'BizTrip AI',
       location: 'San Francisco, CA',
       period: 'May 2025 - September 2025',
       description: [
