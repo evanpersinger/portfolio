@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiPython, SiPostgresql, SiJupyter, SiGit, SiDocker, SiMongodb, SiFastapi } from 'react-icons/si'
+import { SiPython, SiPostgresql, SiJupyter, SiGit, SiDocker, SiFastapi } from 'react-icons/si'
 import { FaDatabase, FaAws } from 'react-icons/fa'
 import './Skills.css'
 
@@ -12,7 +12,6 @@ function Skills() {
     { name: 'Docker', icon: SiDocker },
     { name: 'AWS', icon: FaAws },
     { name: 'PostgreSQL', icon: SiPostgresql },
-    { name: 'MongoDB', icon: SiMongodb },
     { name: 'FastAPI', icon: SiFastapi }
   ]
 

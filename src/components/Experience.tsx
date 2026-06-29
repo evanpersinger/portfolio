@@ -4,14 +4,24 @@ import './Experience.css'
 function Experience() {
   const experiences = [
     {
+      title: 'Software Engineering Intern',
+      company: 'Biztrip AI Inc',
+      location: 'San Francisco, CA',
+      period: 'January 2026 - Present',
+      description: [
+        'Built and maintained backend features in Python for the travel platform',
+        'Designed and tested REST API endpoints backed by PostgreSQL',
+        'Shipped containerized services with Docker in a team Git workflow'
+      ]
+    },
+    {
       title: 'Data Science Intern',
       company: 'Biztrip AI Inc',
       location: 'San Francisco, CA',
-      period: 'May 2025 - Present',
+      period: 'May 2025 - September 2025',
       description: [
         'Developed machine learning models to optimize business operations',
         'Analyzed large datasets to extract actionable insights',
-        'Collaborated with cross-functional teams to implement data-driven solutions',
         'Built automated reporting systems using Python and SQL'
       ]
     }
