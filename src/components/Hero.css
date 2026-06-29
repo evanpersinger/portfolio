@@ -113,6 +113,26 @@
   height: 40px;
 }
 
+.copy-email {
+  position: relative;
+  cursor: pointer;
+}
+
+.copy-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .location-flag {
   width: 32px;
   height: 32px;

@@ -1,4 +1,5 @@
 import React from 'react'
+import CopyEmailButton from './CopyEmailButton'
 import './Hero.css'
 
 function Hero() {
@@ -21,15 +22,13 @@ function Hero() {
           </div>
           <div className="hero-links">
             <a href="/resume" className="hero-link">Resume</a>
-            <a href="https://github.com" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/evanpersinger" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer">
               <img src="/icons/Github_icon.png" alt="GitHub" className="social-icon" />
             </a>
-            <a href="https://linkedin.com" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/evanpersinger/" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer">
               <img src="/icons/linkedin_icon.jpg" alt="LinkedIn" className="social-icon" />
             </a>
-            <a href="mailto:your-email@gmail.com" className="hero-link hero-icon-link">
-              <img src="/icons/gmail_icon.webp" alt="Gmail" className="social-icon" />
-            </a>
+            <CopyEmailButton />
           </div>
         </div>
       </div>
