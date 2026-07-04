@@ -22,7 +22,7 @@ function Hero() {
             <p className="hero-item">San Francisco, CA <img src="/icons/USA_Flag.svg" alt="US flag" className="location-flag" /></p>
           </div>
           <div className="hero-links">
-            <a href="/resume" className="hero-link resume-link" aria-label="Resume" title="Resume">
+            <a href="/Resume.pdf" className="hero-link resume-link" target="_blank" rel="noopener noreferrer" aria-label="Resume" title="Resume">
               <FaRegFileAlt className="resume-icon" aria-hidden="true" />
             </a>
             <a href="https://github.com/evanpersinger" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

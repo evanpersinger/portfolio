@@ -22,7 +22,7 @@ function Education() {
             <div className="timeline-content">
               <h3 className="education-degree">{edu.degree}</h3>
               <div className="education-meta">
-                <span className="school">{edu.school}</span>
+                <span className="school">{edu.school}<img src="/icons/uwo_icon.png" alt="Western University" className="school-icon" /></span>
                 <span className="location">{edu.location}</span>
               </div>
               <p className="major">{edu.major}</p>
