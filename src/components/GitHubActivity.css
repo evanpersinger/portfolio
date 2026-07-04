@@ -1,5 +1,6 @@
 .github-activity {
   flex-shrink: 0;
   margin-left: auto;
+  transform: translateX(60px);
   overflow-x: auto;
 }

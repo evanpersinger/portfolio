@@ -18,7 +18,7 @@ function Hero() {
           <p className="hero-about">21 year old backend engineer</p>
           <div className="hero-info">
             <p className="hero-item">Data Science Student at Western University<img src="/icons/uwo_icon.png" alt="Western University" className="company-icon" /></p>
-            <p className="hero-item">Backend Engineer at BizTrip AI<img src="/icons/biztrip_icon.png" alt="BizTrip AI" className="company-icon biztrip-icon" /></p>
+            <p className="hero-item">Backend Engineering Intern at BizTrip AI<img src="/icons/biztrip_icon.png" alt="BizTrip AI" className="company-icon biztrip-icon" /></p>
             <p className="hero-item">San Francisco, CA <img src="/icons/USA_Flag.svg" alt="US flag" className="location-flag" /></p>
           </div>
           <div className="hero-links">

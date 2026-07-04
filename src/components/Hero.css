@@ -86,7 +86,7 @@
 }
 
 .hero-link:hover {
-  background-color: var(--text-primary);
+  background-color: #8fd6ab;
   color: var(--bg-primary);
 }
 
