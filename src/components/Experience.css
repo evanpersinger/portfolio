@@ -13,7 +13,7 @@
 
 .timeline-content {
   background-color: transparent;
-  border: 1px solid var(--border-color);
+  border: 2px solid #3a6b4f;
   border-radius: 12px;
   padding: 25px;
   transition: transform 0.3s, border-color 0.3s;
@@ -21,7 +21,7 @@
 
 .timeline-content:hover {
   transform: translateX(5px);
-  border-color: var(--text-secondary);
+  border-color: #8fd6ab;
 }
 
 .experience-title {
