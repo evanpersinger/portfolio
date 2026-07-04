@@ -19,6 +19,7 @@ dist/
 .vscode/
 .idea/
 commands.md
+things_to_know.md
 
 # Next.js
 .next/
