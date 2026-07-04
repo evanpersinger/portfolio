@@ -1,0 +1,5 @@
+.github-activity {
+  flex-shrink: 0;
+  margin-left: auto;
+  overflow-x: auto;
+}

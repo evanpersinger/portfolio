@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedinIn, FaRegFileAlt } from 'react-icons/fa'
 import CopyEmailButton from './CopyEmailButton'
+import GitHubActivity from './GitHubActivity'
 import './Hero.css'
 
 function Hero() {
@@ -14,7 +15,7 @@ function Hero() {
           <h1 className="hero-title">
             <span className="gradient-text">Evan Persinger</span>
           </h1>
-          <p className="hero-about">21 years old</p>
+          <p className="hero-about">21 years old backend engineer</p>
           <div className="hero-info">
             <p className="hero-item">Data Science Student at Western University<img src="/icons/uwo_icon.png" alt="Western University" className="company-icon" /></p>
             <p className="hero-item">Backend Engineer at BizTrip AI<img src="/icons/biztrip_icon.png" alt="BizTrip AI" className="company-icon biztrip-icon" /></p>
@@ -33,6 +34,7 @@ function Hero() {
             <CopyEmailButton />
           </div>
         </div>
+        <GitHubActivity />
       </div>
     </section>
   )
