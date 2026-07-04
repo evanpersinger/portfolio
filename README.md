@@ -1,4 +1,4 @@
-# Evan Persinger - Data Science Portfolio
+# Evan Persinger - Portfolio
 
 A modern, responsive portfolio website built with Next.js, React, and TypeScript.
 
@@ -71,7 +71,3 @@ This site can be deployed to:
 - TypeScript
 - CSS3
 - pnpm (package manager)
-
-## License
-
-MIT
