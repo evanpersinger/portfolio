@@ -28,13 +28,16 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .education-meta {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  gap: 4px;
   margin-bottom: 8px;
-  flex-wrap: wrap;
 }
 
 .school {

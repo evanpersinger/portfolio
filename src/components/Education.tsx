@@ -6,7 +6,7 @@ function Education() {
     {
       school: 'Western University',
       degree: 'Bachelor of Science',
-      major: 'Data Science',
+      major: 'B.S. in Data Science',
       location: 'London, Ontario',
       graduation: 'Expected 2027'
     }
@@ -20,9 +20,8 @@ function Education() {
           <div key={index} className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
-              <h3 className="education-degree">{edu.degree}</h3>
+              <h3 className="education-degree">{edu.school}<img src="/icons/uwo_icon.png" alt="Western University" className="school-icon" /></h3>
               <div className="education-meta">
-                <span className="school">{edu.school}<img src="/icons/uwo_icon.png" alt="Western University" className="school-icon" /></span>
                 <span className="location">{edu.location}</span>
               </div>
               <p className="major">{edu.major}</p>
