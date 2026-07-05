@@ -16,12 +16,6 @@
   border: 2px solid #3a6b4f;
   border-radius: 12px;
   padding: 25px;
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.timeline-content:hover {
-  transform: translateX(5px);
-  border-color: #8fd6ab;
 }
 
 .education-degree {
