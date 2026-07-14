@@ -12,6 +12,7 @@ body {
   background-color: #0b140e;
   color: #e8f0ea;
   line-height: 1.6;
+  font-weight: 600;
 }
 
 /* Headings run on the serif; body copy stays on the sans. */

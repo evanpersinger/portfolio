@@ -1,7 +1,15 @@
 'use client'
 
-import { GitHubCalendar } from 'react-github-calendar'
+import dynamic from 'next/dynamic'
 import './GitHubActivity.css'
+
+// Client-only: the calendar fetches contributions after mount, so the server can
+// only ever render a full-year placeholder that transformData then trims. That
+// mismatch breaks hydration.
+const GitHubCalendar = dynamic(
+  () => import('react-github-calendar').then((mod) => mod.GitHubCalendar),
+  { ssr: false }
+)
 
 function GitHubActivity() {
   return (

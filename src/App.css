@@ -13,10 +13,12 @@ section {
   margin: 0;
 }
 
+/* padding-left matches the cards' inner padding so titles line up with card text */
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 12px;
-  text-align: center;
+  text-align: left;
+  padding-left: 15px;
   color: var(--text-primary);
   font-weight: 700;
 }

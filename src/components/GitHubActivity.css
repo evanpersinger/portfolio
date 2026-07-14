@@ -1,6 +1,9 @@
+/* min-height holds the calendar's slot while it loads client-side, so the hero
+   doesn't jump once the contributions come back */
 .github-activity {
   flex-shrink: 0;
   margin-left: auto;
   transform: translateX(60px);
   overflow-x: auto;
+  min-height: 160px;
 }
