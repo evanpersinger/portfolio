@@ -54,19 +54,19 @@
 
 .major {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   margin-bottom: 8px;
 }
 
 .year {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   display: block;
 }
 
 .graduation {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   display: block;
 }
 

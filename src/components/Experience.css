@@ -42,7 +42,7 @@
 
 .period {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 15px;
   display: block;
 }
@@ -54,17 +54,18 @@
 
 .experience-description li {
   color: var(--text-secondary);
-  margin-bottom: 8px;
-  padding-left: 20px;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  padding-left: 26px;
   position: relative;
   line-height: 1.6;
 }
 
 .experience-description li::before {
-  content: '▹';
+  content: '🌿';
   position: absolute;
   left: 0;
-  color: var(--text-secondary);
+  font-size: 0.8em;
 }
 
 .experience-tech {
@@ -77,9 +78,9 @@
 .experience-tech-tag {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
-  padding: 4px 12px;
+  padding: 5px 13px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   border: 1px solid var(--border-color);
 }
 
