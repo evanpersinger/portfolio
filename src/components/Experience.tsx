@@ -13,7 +13,7 @@ function Experience() {
         'Improved map-based hotel search, fixing stale/incomplete results and adding on-demand "search this area" functionality.',
         'Implemented an ICS calendar along with booking email confirmations, allowing users to track the status of their trip.'
       ],
-      technologies: ['Python', 'Docker', 'FastAPI', 'PostgreSQL']
+      technologies: ['Python', 'TypeScript', 'Docker', 'FastAPI', 'PostgreSQL']
     },
     {
       title: 'Data Science Intern',
