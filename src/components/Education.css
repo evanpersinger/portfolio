@@ -4,7 +4,7 @@
 }
 
 .timeline-item {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .timeline-dot {
@@ -24,7 +24,7 @@
   color: var(--text-primary);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .education-meta {

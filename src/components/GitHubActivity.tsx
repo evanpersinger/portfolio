@@ -17,9 +17,9 @@ function GitHubActivity() {
       <GitHubCalendar
         username="evanpersinger"
         colorScheme="dark"
-        blockSize={12}
-        blockMargin={4}
-        fontSize={14}
+        blockSize={16}
+        blockMargin={5}
+        fontSize={16}
         transformData={(contributions) => {
           const cutoff = new Date()
           cutoff.setMonth(cutoff.getMonth() - 6)
