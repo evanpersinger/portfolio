@@ -1,5 +1,3 @@
-# Evan Persinger - Portfolio
-
 ![Portfolio screenshot](public/screenshot.png)
 
 A personal portfolio website built with Next.js, React, and TypeScript.
@@ -14,4 +12,4 @@ A personal portfolio website built with Next.js, React, and TypeScript.
 
 ## Deployment
 
-Deployed on [Vercel](https://vercel.com).
+Live at [portfolio-sable-seven-14.vercel.app](https://portfolio-sable-seven-14.vercel.app/), deployed on Vercel.
