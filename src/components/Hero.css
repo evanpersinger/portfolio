@@ -17,6 +17,11 @@
 
 .hero-left {
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-start;
+  gap: 16px;
 }
 
 .hero-right {
@@ -148,16 +153,6 @@
   font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
-}
-
-.location-flag {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
-  margin: 0 6px;
-  object-fit: contain;
-  display: inline-block;
-  flex-shrink: 0;
 }
 
 .company-icon {
