@@ -94,7 +94,7 @@ function LocationMap() {
               <FaPlane color="#e8f0ea" size={PLANE_SIZE} x={-PLANE_SIZE / 2} y={-PLANE_SIZE / 2} />
             </g>
             {!reducedMotion && (
-              <animateMotion dur="6s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1">
+              <animateMotion dur="6s" repeatCount="indefinite" rotate="auto-reverse" calcMode="linear" keyPoints="1;0" keyTimes="0;1">
                 <mpath xlinkHref="#sf-flight-figure8" />
               </animateMotion>
             )}

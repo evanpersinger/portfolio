@@ -32,11 +32,11 @@ function Experience() {
   return (
     <section id="experience" className="experience">
       <h2 className="section-title">Experience</h2>
-      <div className="timeline">
+      <div className="experience-timeline">
         {experiences.map((exp, index) => (
-          <div key={index} className="timeline-item">
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
+          <div key={index} className="experience-timeline-item">
+            <div className="experience-timeline-dot"></div>
+            <div className="experience-timeline-content">
               <h3 className="experience-title">{exp.title}</h3>
               <div className="experience-meta">
                 <span className="company">{exp.company}</span>

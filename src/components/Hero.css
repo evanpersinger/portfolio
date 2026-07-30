@@ -27,6 +27,7 @@
 .hero-right {
   flex: 1;
   text-align: left;
+  margin-top: -35px;
 }
 
 /* No border here: a border would sit between the photo and the green ring and
@@ -75,11 +76,14 @@
   display: flex;
   gap: 16px;
   justify-content: flex-start;
-  margin-top: 20px;
+  margin-top: 8px;
   padding: 10px 18px;
   border-radius: 12px;
   width: fit-content;
-  border: 2px solid #3a6b4f;
+  border: 22px solid #6b4a2f;
+  border-image-source: var(--branch-frame);
+  border-image-slice: 30;
+  border-image-repeat: stretch;
 }
 
 .hero-link {
