@@ -1,0 +1,29 @@
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 80px 0 60px;
+}
+
+.site-nav-link {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 2px solid #3a6b4f;
+  transition: all 0.3s;
+}
+
+.site-nav-link:hover,
+.site-nav-link-active {
+  background-color: #3a6b4f;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    padding: 20px 20px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
