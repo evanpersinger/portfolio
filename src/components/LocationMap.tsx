@@ -6,9 +6,16 @@ import sfMap from './sf-map-data.json'
 import './LocationMap.css'
 
 // FaPlane's glyph rests nose-up-and-to-the-right; this levels it to point
-// along +x before the tangential/orbit rotations are applied on top.
+// along +x, then animateMotion's rotate="auto" turns it to match the
+// figure-8 path's tangent direction on top of that.
 const PLANE_LEVEL_ANGLE = -20
-const ORBIT_RADIUS = 76
+const PLANE_SIZE = 24
+const LOOP_RADIUS = 38
+
+// Two circles of LOOP_RADIUS, tangent at the origin, traced in opposite
+// rotational senses so the path reads as one continuous "∞" loop instead
+// of two circles that just happen to touch.
+const FIGURE_EIGHT_PATH = `M 0,0 A ${LOOP_RADIUS},${LOOP_RADIUS} 0 0,1 ${LOOP_RADIUS * 2},0 A ${LOOP_RADIUS},${LOOP_RADIUS} 0 0,1 0,0 A ${LOOP_RADIUS},${LOOP_RADIUS} 0 0,0 ${-LOOP_RADIUS * 2},0 A ${LOOP_RADIUS},${LOOP_RADIUS} 0 0,0 0,0`
 
 function useReducedMotion() {
   const [reduced, setReduced] = useState(false)
@@ -71,21 +78,25 @@ function LocationMap() {
           San Francisco
         </text>
         <g transform={`translate(${pinX},${pinY})`}>
+          <path id="sf-flight-figure8" d={FIGURE_EIGHT_PATH} fill="none" stroke="none" />
           <g>
-            <g transform={`translate(${ORBIT_RADIUS},0) rotate(90)`}>
-              <g transform={`rotate(${PLANE_LEVEL_ANGLE})`}>
-                <FaPlane color="#e8f0ea" size={17} x={-8.5} y={-8.5} />
-              </g>
+            <g transform={`rotate(${PLANE_LEVEL_ANGLE})`}>
+              <FaPlane color="#e8f0ea" size={PLANE_SIZE} x={-PLANE_SIZE / 2} y={-PLANE_SIZE / 2} />
             </g>
             {!reducedMotion && (
-              <animateTransform
-                attributeName="transform"
-                type="rotate"
-                from="0 0 0"
-                to="360 0 0"
-                dur="6s"
-                repeatCount="indefinite"
-              />
+              <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
+                <mpath xlinkHref="#sf-flight-figure8" />
+              </animateMotion>
+            )}
+          </g>
+          <g>
+            <g transform={`rotate(${PLANE_LEVEL_ANGLE})`}>
+              <FaPlane color="#e8f0ea" size={PLANE_SIZE} x={-PLANE_SIZE / 2} y={-PLANE_SIZE / 2} />
+            </g>
+            {!reducedMotion && (
+              <animateMotion dur="6s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="1;0" keyTimes="0;1">
+                <mpath xlinkHref="#sf-flight-figure8" />
+              </animateMotion>
             )}
           </g>
         </g>
