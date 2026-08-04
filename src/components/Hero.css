@@ -169,6 +169,28 @@
   flex-shrink: 0;
 }
 
+/* Keeps both flags on one line: without this the Canadian flag can wrap on its
+   own when the hero column gets narrow. */
+.flag-group {
+  white-space: nowrap;
+}
+
+/* Flags are rectangular, so they get their own size instead of .company-icon's
+   40x40 square, which would letterbox them down to a smaller visual width. */
+.flag-icon {
+  width: 36px;
+  height: 25px;
+  vertical-align: middle;
+  margin-left: 6px;
+  object-fit: contain;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.flag-icon + .flag-icon {
+  margin-left: 4px;
+}
+
 .biztrip-icon {
   width: 80px;
   height: 80px;
