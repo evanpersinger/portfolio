@@ -1,7 +1,6 @@
 import './Pets.css'
 
 const PETS = [
-  '/pets/pet-1.jpg',
   '/pets/pet-2.jpg',
   '/pets/pet-3.jpg',
   '/pets/pet-4.jpg',

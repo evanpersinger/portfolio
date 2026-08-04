@@ -3,7 +3,7 @@
 .github-activity {
   flex-shrink: 0;
   margin-left: auto;
-  transform: translateX(60px);
+  transform: translateX(108px);
   overflow-x: auto;
   min-height: 190px;
 }

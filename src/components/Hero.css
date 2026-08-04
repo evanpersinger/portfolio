@@ -24,8 +24,12 @@
   gap: 16px;
 }
 
+/* min-width keeps each hero-info line on a single row. Without it flexbox
+   squeezes this column to its min-content width (~348px) because the GitHub
+   calendar next to it never shrinks, and the two longest lines wrap. */
 .hero-right {
   flex: 1;
+  min-width: 440px;
   text-align: left;
   margin-top: -35px;
 }
@@ -251,6 +255,7 @@
 
   .hero-right {
     text-align: center;
+    min-width: 0;
   }
 
   .hero-links {
