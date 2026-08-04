@@ -1,0 +1,35 @@
+- generic [active] [ref=f11e1]:
+  - navigation [ref=f11e2]:
+    - link "Profile" [ref=f11e3] [cursor=pointer]:
+      - /url: /
+    - link "Projects" [ref=f11e4] [cursor=pointer]:
+      - /url: /projects
+    - link "Pets" [ref=f11e5] [cursor=pointer]:
+      - /url: /pets
+  - main [ref=f11e7]:
+    - generic [ref=f11e9]:
+      - img "Pet photo" [ref=f11e10]
+      - img "Pet photo" [ref=f11e11]
+      - img "Pet photo" [ref=f11e12]
+      - img "Pet photo" [ref=f11e13]
+      - img "Pet photo" [ref=f11e14]
+      - img "Pet photo" [ref=f11e15]
+      - img "Pet photo" [ref=f11e16]
+      - img "Pet photo" [ref=f11e17]
+      - img "Pet photo" [ref=f11e18]
+      - img "Pet photo" [ref=f11e19]
+      - img "Pet photo" [ref=f11e20]
+      - img "Pet photo" [ref=f11e21]
+      - img "Pet photo" [ref=f11e22]
+      - img "Pet photo" [ref=f11e23]
+      - img "Pet photo" [ref=f11e24]
+      - img "Pet photo" [ref=f11e25]
+      - img "Pet photo" [ref=f11e26]
+      - img "Pet photo" [ref=f11e27]
+      - img "Pet photo" [ref=f11e28]
+      - img "Pet photo" [ref=f11e29]
+      - img "Pet photo" [ref=f11e30]
+      - img "Pet photo" [ref=f11e31]
+      - img "Pet photo" [ref=f11e32]
+      - img "Pet photo" [ref=f11e33]
+  - alert [ref=f11e34]

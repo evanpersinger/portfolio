@@ -1,8 +1,14 @@
+/* Opt out of the site-wide `section { max-width: 1200px }` so the grid can use
+   the window width instead of leaving ~800px empty on a wide screen. */
+.pets {
+  max-width: none;
+}
+
 .pets-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1100px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1700px;
 }
 
 /* Square cells: most of these photos are 3:4 portrait, so a square crops ~25%
