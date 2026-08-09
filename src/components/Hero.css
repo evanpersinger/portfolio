@@ -82,7 +82,9 @@
   justify-content: flex-start;
   margin-top: 24px;
   width: fit-content;
+  position: relative;
 }
+
 
 /* Fixed square container so all four circles match, the icons inside are
    deliberately different sizes (LinkedIn's glyph reads small at 32px). */
@@ -99,6 +101,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero-link:hover {
@@ -116,13 +119,23 @@
   background: none;
 }
 
+/* Above .leaf-field, which is absolutely positioned and would otherwise paint
+   over these. */
+.social-icon,
+.resume-icon {
+  position: relative;
+  z-index: 1;
+}
+
 .social-icon {
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 
-.hero-icon-link:nth-child(3) .social-icon {
+/* Targeted by class, not position: this used to be :nth-child(3) and silently
+   moved to the wrong icon when another element was added to .hero-links. */
+.linkedin-icon {
   width: 40px;
   height: 40px;
   color: #0a66c2;

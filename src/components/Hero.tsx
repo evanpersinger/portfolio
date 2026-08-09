@@ -2,6 +2,7 @@ import React from 'react'
 import { FaGithub, FaLinkedinIn, FaRegFileAlt } from 'react-icons/fa'
 import CopyEmailButton from './CopyEmailButton'
 import GitHubActivity from './GitHubActivity'
+import LeafField from './LeafField'
 import './Hero.css'
 
 function Hero() {
@@ -24,13 +25,16 @@ function Hero() {
           </div>
           <div className="hero-links">
             <a href="/Resume.pdf" className="hero-link" target="_blank" rel="noopener noreferrer" aria-label="Resume" title="Resume">
+              <LeafField />
               <FaRegFileAlt className="resume-icon" aria-hidden="true" />
             </a>
             <a href="https://github.com/evanpersinger" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <LeafField />
               <FaGithub className="social-icon" aria-hidden="true" />
             </a>
             <a href="https://www.linkedin.com/in/evanpersinger/" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <FaLinkedinIn className="social-icon" aria-hidden="true" />
+              <LeafField />
+              <FaLinkedinIn className="social-icon linkedin-icon" aria-hidden="true" />
             </a>
             <CopyEmailButton />
           </div>

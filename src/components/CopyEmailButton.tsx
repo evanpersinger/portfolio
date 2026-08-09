@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import LeafField from './LeafField'
 
 const EMAIL = 'evan9persinger@gmail.com'
 
@@ -25,6 +26,7 @@ function CopyEmailButton() {
       aria-label="Copy email address"
       title={EMAIL}
     >
+      <LeafField />
       <img src="/icons/gmail_icon.webp" alt="Gmail" className="social-icon" />
       {copied && <span className="copy-tooltip" role="status">Copied!</span>}
     </button>

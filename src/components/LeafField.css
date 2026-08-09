@@ -1,0 +1,46 @@
+/* Clips the leaves to the icon's circle. The clipping lives here rather than on
+   .hero-link because that would also clip .copy-tooltip, which sits above the
+   button at bottom: 100%. */
+.leaf-field {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  --stagger: 0s;
+}
+
+.leaf {
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 4px;
+  background: #7fae90;
+  border-radius: 0 100% 0 100%;
+  opacity: 0;
+  animation-name: leaf-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes leaf-fall {
+  0% { transform: translate(0, -6px) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.8; }
+  100% { transform: translate(9px, 74px) rotate(220deg); opacity: 0; }
+}
+
+.leaf:nth-child(1) { left: 18%; animation-duration: 7s; animation-delay: calc(var(--stagger)); }
+.leaf:nth-child(2) { left: 47%; animation-duration: 9s; animation-delay: calc(var(--stagger) + 2.4s); }
+.leaf:nth-child(3) { left: 72%; animation-duration: 8s; animation-delay: calc(var(--stagger) + 4.8s); }
+
+/* Offsets the four circles so they don't fall in unison. Set on .leaf-field so
+   it inherits down to the leaves without overriding their individual delays.
+   Purely cosmetic: if the icon order changes, the stagger reshuffles harmlessly. */
+.hero-link:nth-child(2) .leaf-field { --stagger: 1.1s; }
+.hero-link:nth-child(3) .leaf-field { --stagger: 2.3s; }
+.hero-link:nth-child(4) .leaf-field { --stagger: 3.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .leaf { animation: none; }
+}
