@@ -6,7 +6,7 @@ function Education() {
     {
       school: 'Western University',
       major: 'B.S. in Data Science',
-      location: 'London, Ontario',
+      location: 'London, Ontario, Canada',
       graduation: 'Expected 2027'
     }
   ]

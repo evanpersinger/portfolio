@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaLinkedinIn, FaRegFileAlt } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaMapPin, FaRegFileAlt } from 'react-icons/fa'
 import CopyEmailButton from './CopyEmailButton'
 import GitHubActivity from './GitHubActivity'
 import LeafField from './LeafField'
@@ -20,7 +20,7 @@ function Hero() {
           <div className="hero-info">
             <p className="hero-item">Data Science Student at Western University<img src="/icons/uwo_icon.png" alt="Western University" className="company-icon" /></p>
             <p className="hero-item">Backend Engineering Intern at BizTrip AI<a href="https://www.biztrip.ai/" target="_blank" rel="noopener noreferrer" aria-label="BizTrip AI"><img src="/icons/biztrip_icon.png" alt="BizTrip AI" className="company-icon biztrip-icon" /></a></p>
-            <p className="hero-item">San Francisco, CA</p>
+            <p className="hero-item">San Francisco, CA<FaMapPin className="location-icon" aria-hidden="true" /></p>
             <p className="hero-item">Dual-citizen: USA and Canada<span className="flag-group"><img src="/icons/USA_Flag.png" alt="USA" className="flag-icon" /><img src="/icons/Canadian_Flag.png" alt="Canada" className="flag-icon" /></span></p>
           </div>
           <div className="hero-links">

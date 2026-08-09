@@ -176,6 +176,18 @@
   flex-shrink: 0;
 }
 
+/* The pin's viewBox is tall and narrow (288x512), so this sets its height and
+   the width follows from the aspect ratio, landing around 11px. */
+.location-icon {
+  width: 20px;
+  height: 20px;
+  color: #e74c3c;
+  vertical-align: middle;
+  margin-left: 8px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
 /* Keeps both flags on one line: without this the Canadian flag can wrap on its
    own when the hero column gets narrow. */
 .flag-group {
