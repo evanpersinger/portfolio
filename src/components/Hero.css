@@ -173,6 +173,15 @@
   flex-shrink: 0;
 }
 
+.location-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 8px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
 /* Keeps both flags on one line: without this the Canadian flag can wrap on its
    own when the hero column gets narrow. */
 .flag-group {
