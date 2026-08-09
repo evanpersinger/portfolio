@@ -39,3 +39,21 @@
   height: 0;
 }
 
+/* Matches the grid's 1500px step in App.css: once the column drops to a 460px
+   floor the full-size pills no longer fit four across, so row 1 would wrap. */
+@media (max-width: 1500px) {
+  .skill-tags {
+    gap: 10px;
+  }
+
+  .skill-tag {
+    padding: 8px 13px;
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+
+  .skill-icon {
+    font-size: 1.3rem;
+  }
+}
+

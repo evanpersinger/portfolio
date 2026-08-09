@@ -26,7 +26,10 @@ section {
 /* Left alignment baseline: padding-left: 60px to align with hero profile pic */
 .education-experience-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 560px;
+  /* 1.72fr is what lands Skills on ~560px at the 1700px max-width, which is the
+     floor the big pills need to keep their 4 / 2 / 2 rows. minmax lets all three
+     columns shrink together instead of Skills bullying the other two. */
+  grid-template-columns: 2fr 1fr minmax(560px, 1.72fr);
   gap: 32px;
   max-width: 1700px;
   margin: 0;
@@ -38,7 +41,16 @@ section {
   max-width: none;
 }
 
-@media (max-width: 1024px) {
+/* Below this there isn't room to give Skills 560px without starving Experience,
+   so drop the floor. Skills.css steps the pills down at the same width so the
+   4 / 2 / 2 rows still fit in the smaller box. */
+@media (max-width: 1500px) {
+  .education-experience-container {
+    grid-template-columns: 2fr 1fr minmax(460px, 1.72fr);
+  }
+}
+
+@media (max-width: 1200px) {
   .education-experience-container {
     grid-template-columns: 1fr;
     gap: 30px;

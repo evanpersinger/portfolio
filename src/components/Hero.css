@@ -1,14 +1,20 @@
 /* Left alignment baseline: padding-left: 60px to match all other sections */
+/* Matches .education-experience-container below, so the hero and the sections
+   under it end at the same right edge instead of the hero stopping 500px short */
 .hero {
   padding-top: 60px;
   padding-bottom: 40px;
   padding-left: 60px !important;
   padding-right: 80px !important;
+  max-width: 1700px;
 }
 
+/* wrap drops the calendar onto its own row rather than letting it get clipped
+   once the photo, the text column and the calendar no longer fit side by side */
 .hero-content {
   max-width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 40px;
   margin: 0;
