@@ -48,13 +48,11 @@ function Experience() {
                   <li key={itemIndex}>{item}</li>
                 ))}
               </ul>
-              {exp.technologies && (
-                <div className="experience-tech">
-                  {exp.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="experience-tech-tag">{tech}</span>
-                  ))}
-                </div>
-              )}
+              <div className="experience-tech">
+                {exp.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="experience-tech-tag">{tech}</span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

@@ -205,47 +205,6 @@
   flex-shrink: 0;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 12px 32px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s;
-  cursor: pointer;
-  border: none;
-  display: inline-block;
-}
-
-.btn-primary {
-  background-color: var(--text-primary);
-  color: var(--bg-primary);
-  font-weight: 700;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  background-color: var(--text-secondary);
-}
-
-.btn-secondary {
-  background: transparent;
-  border: 2px solid #3a6b4f;
-  color: var(--text-primary);
-}
-
-.btn-secondary:hover {
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  transform: translateY(-2px);
-}
-
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;

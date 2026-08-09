@@ -37,14 +37,6 @@
   margin-bottom: 8px;
 }
 
-.school {
-  color: var(--text-primary);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .school-icon {
   width: 24px;
   height: 24px;
@@ -59,12 +51,6 @@
   color: var(--text-secondary);
   font-size: 1.05rem;
   margin-bottom: 8px;
-}
-
-.year {
-  color: var(--text-secondary);
-  font-size: 1.05rem;
-  display: block;
 }
 
 .graduation {

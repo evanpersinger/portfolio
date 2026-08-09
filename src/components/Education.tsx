@@ -5,7 +5,6 @@ function Education() {
   const education = [
     {
       school: 'Western University',
-      degree: 'Bachelor of Science',
       major: 'B.S. in Data Science',
       location: 'London, Ontario',
       graduation: 'Expected 2027'
