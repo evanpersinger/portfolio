@@ -13,8 +13,8 @@
 
 .timeline-content {
   background-color: transparent;
-  border: 22px solid #6b4a2f;
-  border-image-source: var(--branch-frame);
+  border: 10px solid #6b4a2f;
+  border-image-source: var(--log-frame);
   border-image-slice: 30;
   border-image-repeat: stretch;
   border-radius: 12px;
