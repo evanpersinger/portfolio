@@ -32,7 +32,7 @@ function Pets() {
     <section id="pets" className="pets">
       <div className="pets-grid">
         {PETS.map((image) => (
-          <img src={image} alt="Pet photo" className="pet-photo" key={image} />
+          <img src={image} alt="Pet photo" className="pet-photo" loading="lazy" key={image} />
         ))}
       </div>
     </section>
