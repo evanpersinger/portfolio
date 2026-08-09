@@ -26,10 +26,11 @@ section {
 /* Left alignment baseline: padding-left: 60px to align with hero profile pic */
 .education-experience-container {
   display: grid;
-  /* 1.72fr is what lands Skills on ~560px at the 1700px max-width, which is the
-     floor the big pills need to keep their 4 / 2 / 2 rows. minmax lets all three
-     columns shrink together instead of Skills bullying the other two. */
-  grid-template-columns: 2fr 1fr minmax(560px, 1.72fr);
+  /* 1.82fr lands Skills on ~580px at the 1700px max-width. Measured in Inter,
+     row 1 of the tech stack needs 512px of inner space, and 560px only gave 508,
+     so the floor has headroom on purpose. minmax lets all three columns shrink
+     together instead of Skills bullying the other two. */
+  grid-template-columns: 2fr 1fr minmax(580px, 1.82fr);
   gap: 32px;
   max-width: 1700px;
   margin: 0;
@@ -46,7 +47,7 @@ section {
    4 / 2 / 2 rows still fit in the smaller box. */
 @media (max-width: 1500px) {
   .education-experience-container {
-    grid-template-columns: 2fr 1fr minmax(460px, 1.72fr);
+    grid-template-columns: 2fr 1fr minmax(480px, 1.82fr);
   }
 }
 
