@@ -1,11 +1,24 @@
 /* min-height holds the calendar's slot while it loads client-side, so the hero
    doesn't jump once the contributions come back */
 .github-activity {
-  margin-left: auto;
-  /* min-width: 0 lets flexbox actually shrink this below its content width;
-     without it the calendar refuses to give ground and overflows the hero.
-     overflow-x is the last resort once it has shrunk as far as it can. */
+  /* Shrink with the hero row rather than wrapping onto its own line. No
+     margin-left: auto here on purpose: when this does wrap it should sit at the
+     row's left edge, not get flung into the far corner leaving a gap behind it.
+     max-width caps it at the column it sits in, so the calendar can never push
+     the page wider than the viewport; without it the natural 562px grid ran off
+     the side of a phone and got clipped. */
+  flex: 1 1 562px;
   min-width: 0;
+  max-width: 100%;
   overflow-x: auto;
   min-height: 190px;
+}
+
+/* The calendar grid carries a viewBox, so overriding its fixed width attribute
+   scales it proportionally instead of pinning the hero row at 562px. Scoped by
+   class deliberately: the legend swatches are unclassed SVGs with no viewBox and
+   would stretch rather than scale. */
+.github-activity .react-activity-calendar__calendar {
+  width: 100%;
+  height: auto;
 }
