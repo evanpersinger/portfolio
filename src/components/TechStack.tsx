@@ -20,7 +20,7 @@ function TechStack() {
   return (
     <section id="tech-stack" className="tech-stack">
       <h2 className="section-title">Tech Stack</h2>
-      <div className="tech-tags">
+      <div className="tech-tags log-box">
         {technologies.map((tech, index) => {
           const Icon = tech.icon
           return (

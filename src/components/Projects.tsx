@@ -11,7 +11,7 @@ function Projects() {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="project-card"
+            className="project-card log-box"
             key={project.title}
           >
             <h3 className="project-title">{project.title}</h3>

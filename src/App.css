@@ -42,9 +42,8 @@ section {
   max-width: none;
 }
 
-/* Below this there isn't room to give TechStack 560px without starving Experience,
-   so drop the floor. TechStack.css steps the pills down at the same width so the
-   4 / 2 / 2 rows still fit in the smaller box. */
+/* TechStack.css steps the pills down at this same width, so the 4 / 2 / 2 rows
+   still fit once the column floor drops. */
 @media (max-width: 1500px) {
   .education-experience-container {
     grid-template-columns: 2fr 1fr minmax(480px, 1.82fr);

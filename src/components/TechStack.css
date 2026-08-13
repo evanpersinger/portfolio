@@ -10,11 +10,6 @@
   gap: 12px;
   justify-content: center;
   background-color: var(--card-bg);
-  border: 10px solid #6b4a2f;
-  border-image-source: var(--log-frame);
-  border-image-slice: 30;
-  border-image-repeat: stretch;
-  border-radius: 12px;
   padding: 16px;
 }
 

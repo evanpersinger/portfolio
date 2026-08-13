@@ -8,11 +8,6 @@
 .project-card {
   display: block;
   background-color: transparent;
-  border: 10px solid #6b4a2f;
-  border-image-source: var(--log-frame);
-  border-image-slice: 30;
-  border-image-repeat: stretch;
-  border-radius: 12px;
   padding: 25px;
   text-decoration: none;
   transition: transform 0.3s;

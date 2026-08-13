@@ -35,7 +35,7 @@ function Experience() {
       <div className="experience-timeline">
         {experiences.map((exp, index) => (
           <div key={index} className="experience-timeline-item">
-            <div className="experience-timeline-content">
+            <div className="experience-timeline-content log-box">
               <h3 className="experience-title">{exp.title}</h3>
               <div className="experience-meta">
                 <span className="company">{exp.company}</span>
