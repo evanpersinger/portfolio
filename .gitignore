@@ -1,5 +1,4 @@
 # Sensitive files
-account.md
 portfolio_info.md
 *.env
 *.env.local
@@ -17,9 +16,7 @@ dist/
 .DS_Store
 *.log
 .vscode/
-.idea/
 .playwright-mcp/
-things_to_know.md
 
 # Next.js
 .next/
