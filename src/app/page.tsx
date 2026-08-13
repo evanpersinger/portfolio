@@ -1,7 +1,7 @@
 import Hero from '../components/Hero'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
-import Skills from '../components/Skills'
+import TechStack from '../components/TechStack'
 import '../App.css'
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
         <div className="education-experience-container">
           <Experience />
           <Education />
-          <Skills />
+          <TechStack />
         </div>
       </main>
     </div>

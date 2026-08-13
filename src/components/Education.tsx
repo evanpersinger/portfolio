@@ -17,7 +17,6 @@ function Education() {
       <div className="timeline">
         {education.map((edu, index) => (
           <div key={index} className="timeline-item">
-            <div className="timeline-dot"></div>
             <div className="timeline-content">
               <h3 className="education-degree">{edu.school}<img src="/icons/uwo_icon.png" alt="Western University" className="school-icon" /></h3>
               <div className="education-meta">

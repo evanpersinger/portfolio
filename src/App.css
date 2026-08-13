@@ -26,10 +26,10 @@ section {
 /* Left alignment baseline: padding-left: 60px to align with hero profile pic */
 .education-experience-container {
   display: grid;
-  /* 1.82fr lands Skills on ~580px at the 1700px max-width. Measured in Inter,
+  /* 1.82fr lands TechStack on ~580px at the 1700px max-width. Measured in Inter,
      row 1 of the tech stack needs 512px of inner space, and 560px only gave 508,
      so the floor has headroom on purpose. minmax lets all three columns shrink
-     together instead of Skills bullying the other two. */
+     together instead of TechStack bullying the other two. */
   grid-template-columns: 2fr 1fr minmax(580px, 1.82fr);
   gap: 32px;
   max-width: 1700px;
@@ -42,8 +42,8 @@ section {
   max-width: none;
 }
 
-/* Below this there isn't room to give Skills 560px without starving Experience,
-   so drop the floor. Skills.css steps the pills down at the same width so the
+/* Below this there isn't room to give TechStack 560px without starving Experience,
+   so drop the floor. TechStack.css steps the pills down at the same width so the
    4 / 2 / 2 rows still fit in the smaller box. */
 @media (max-width: 1500px) {
   .education-experience-container {

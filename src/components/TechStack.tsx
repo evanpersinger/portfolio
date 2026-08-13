@@ -1,12 +1,12 @@
 import React from 'react'
 import { SiPython, SiPostgresql, SiJupyter, SiGit, SiDocker, SiFastapi } from 'react-icons/si'
 import { FaDatabase, FaAws } from 'react-icons/fa'
-import './Skills.css'
+import './TechStack.css'
 
-function Skills() {
-  // Order drives the row layout together with the .skill-break markers below:
+function TechStack() {
+  // Order drives the row layout together with the .tech-break markers below:
   // row 1: Python, SQL, Jupyter, Git | row 2: AWS Postgres, PostgreSQL | row 3: Docker, FastAPI
-  const allSkills = [
+  const technologies = [
     { name: 'Python', icon: SiPython },
     { name: 'SQL', icon: FaDatabase },
     { name: 'Jupyter', icon: SiJupyter },
@@ -18,17 +18,17 @@ function Skills() {
   ]
 
   return (
-    <section id="technologies" className="skills">
+    <section id="tech-stack" className="tech-stack">
       <h2 className="section-title">Tech Stack</h2>
-      <div className="skill-tags">
-        {allSkills.map((skill, index) => {
-          const IconComponent = skill.icon
+      <div className="tech-tags">
+        {technologies.map((tech, index) => {
+          const Icon = tech.icon
           return (
             <React.Fragment key={index}>
-              {(skill.name === 'AWS Postgres' || skill.name === 'Docker') && <span className="skill-break" />}
-              <span className="skill-tag">
-                {IconComponent && <IconComponent className="skill-icon" />}
-                {skill.name}
+              {(tech.name === 'AWS Postgres' || tech.name === 'Docker') && <span className="tech-break" />}
+              <span className="tech-tag">
+                <Icon className="tech-icon" />
+                {tech.name}
               </span>
             </React.Fragment>
           )
@@ -38,4 +38,4 @@ function Skills() {
   )
 }
 
-export default Skills
+export default TechStack

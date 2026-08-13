@@ -1,14 +1,15 @@
-.skills {
+.tech-stack {
   display: flex;
   flex-direction: column;
   padding: 20px 0 0 0;
 }
 
-.skill-tags {
+.tech-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+  background-color: var(--card-bg);
   border: 10px solid #6b4a2f;
   border-image-source: var(--log-frame);
   border-image-slice: 30;
@@ -17,7 +18,7 @@
   padding: 16px;
 }
 
-.skill-tag {
+.tech-tag {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
   padding: 10px 17px;
@@ -29,31 +30,30 @@
   gap: 7px;
 }
 
-.skill-icon {
+.tech-icon {
   font-size: 1.6rem;
 }
 
 /* Forces AWS Postgres (and the tags after it) onto a new row */
-.skill-break {
+.tech-break {
   flex-basis: 100%;
   height: 0;
 }
 
-/* Matches the grid's 1500px step in App.css: once the column drops to a 460px
+/* Matches the grid's 1500px step in App.css: once the column drops to a 480px
    floor the full-size pills no longer fit four across, so row 1 would wrap. */
 @media (max-width: 1500px) {
-  .skill-tags {
+  .tech-tags {
     gap: 10px;
   }
 
-  .skill-tag {
+  .tech-tag {
     padding: 8px 13px;
     font-size: 0.95rem;
     gap: 6px;
   }
 
-  .skill-icon {
+  .tech-icon {
     font-size: 1.3rem;
   }
 }
-
