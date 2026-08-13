@@ -16,7 +16,6 @@ dist/
 .DS_Store
 *.log
 .vscode/
-.playwright-mcp/
 
 # Next.js
 .next/

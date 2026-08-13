@@ -86,13 +86,3 @@
   font-size: 0.95rem;
   border: 1px solid var(--border-color);
 }
-
-@media (max-width: 768px) {
-  .experience-timeline {
-    padding-left: 30px;
-  }
-
-  .experience-timeline-dot {
-    left: -36px;
-  }
-}

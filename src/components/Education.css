@@ -62,13 +62,3 @@
   font-size: 1.12rem;
   display: block;
 }
-
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 30px;
-  }
-
-  .timeline-dot {
-    left: -36px;
-  }
-}
