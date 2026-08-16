@@ -1,11 +1,15 @@
-import React from 'react'
-import { FaGithub, FaLinkedinIn, FaMapPin, FaRegFileAlt } from 'react-icons/fa'
+'use client'
+
+import React, { useState } from 'react'
+import { FaGithub, FaLinkedinIn, FaMapPin, FaPlane, FaRegFileAlt } from 'react-icons/fa'
 import CopyEmailButton from './CopyEmailButton'
 import GitHubActivity from './GitHubActivity'
 import LeafField from './LeafField'
 import './Hero.css'
 
 function Hero() {
+  const [planeFlying, setPlaneFlying] = useState(false)
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
@@ -19,7 +23,7 @@ function Hero() {
           <p className="hero-about">21 year old backend engineer</p>
           <div className="hero-info">
             <p className="hero-item">Data Science Student at Western University<img src="/icons/uwo_icon.png" alt="Western University" className="company-icon" /></p>
-            <p className="hero-item">Backend Engineering Intern at BizTrip AI<a href="https://www.biztrip.ai/" target="_blank" rel="noopener noreferrer" aria-label="BizTrip AI"><img src="/icons/biztrip_icon.png" alt="BizTrip AI" className="company-icon biztrip-icon" /></a></p>
+            <p className="hero-item">Backend Engineering Intern at BizTrip AI<a href="https://www.biztrip.ai/" target="_blank" rel="noopener noreferrer" aria-label="BizTrip AI"><img src="/icons/biztrip_icon.png" alt="BizTrip AI" className="company-icon biztrip-icon" /></a><button type="button" className={`plane-button${planeFlying ? ' flying' : ''}`} onClick={() => setPlaneFlying(true)} onAnimationEnd={() => setPlaneFlying(false)} aria-label="Fly the plane in a loop"><FaPlane className="plane-icon" aria-hidden="true" /></button></p>
             <p className="hero-item">San Francisco, CA<FaMapPin className="location-icon" aria-hidden="true" /><img src="/icons/Niners.png" alt="San Francisco 49ers" className="niners-icon" /></p>
             <p className="hero-item">Dual-citizen: USA and Canada<span className="flag-group"><img src="/icons/USA_Flag.png" alt="USA" className="flag-icon" /><img src="/icons/Canadian_Flag.png" alt="Canada" className="flag-icon" /></span></p>
           </div>

@@ -32,10 +32,13 @@
 
 /* min-width keeps each hero-info line on a single row. Without it flexbox
    squeezes this column to its min-content width (~348px) because the GitHub
-   calendar next to it never shrinks, and the two longest lines wrap. */
+   calendar next to it never shrinks, and the two longest lines wrap. 480px
+   (not 440px) because the BizTrip line, with its logo and the plane button,
+   needs ~470px and was wrapping at window widths just above the mobile
+   breakpoint where flexbox was still squeezing this column to the old min. */
 .hero-right {
   flex: 1;
-  min-width: 440px;
+  min-width: 490px;
   text-align: left;
   margin-top: -35px;
 }
@@ -239,6 +242,70 @@
   object-fit: contain;
   display: inline-block;
   flex-shrink: 0;
+}
+
+/* Extra margin-left (vs. the 4-8px other icons use) so the plane doesn't sit
+   close enough to the BizTrip link to catch an accidental click. */
+.plane-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.plane-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.plane-button:hover .plane-icon {
+  transform: scale(1.15);
+}
+
+/* z-index lifts the plane above the rest of the hero text while it's mid-loop,
+   position: relative is required for z-index and transform to apply as expected. */
+.plane-button.flying {
+  z-index: 5;
+  animation: plane-loop 1.4s linear;
+}
+
+/* A single circle of radius 40px, traced at a constant angle-per-time rate
+   so both the movement and the banking rotation are steady throughout. */
+@keyframes plane-loop {
+  0% {
+    transform: translate(0, 0) rotate(135deg);
+  }
+  12.5% {
+    transform: translate(12px, 28px) rotate(90deg);
+  }
+  25% {
+    transform: translate(40px, 40px) rotate(45deg);
+  }
+  37.5% {
+    transform: translate(68px, 28px) rotate(0deg);
+  }
+  50% {
+    transform: translate(80px, 0) rotate(-45deg);
+  }
+  62.5% {
+    transform: translate(68px, -28px) rotate(-90deg);
+  }
+  75% {
+    transform: translate(40px, -40px) rotate(-135deg);
+  }
+  87.5% {
+    transform: translate(12px, -28px) rotate(-180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-225deg);
+  }
 }
 
 @media (max-width: 768px) {

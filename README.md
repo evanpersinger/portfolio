@@ -13,3 +13,7 @@ A personal portfolio website built with Next.js, React, and TypeScript.
 ## Deployment
 
 Live at [portfolio-sable-seven-14.vercel.app](https://portfolio-sable-seven-14.vercel.app/), deployed on Vercel.
+
+## Credits
+
+Fern background photo by Kendal James on [Unsplash](https://unsplash.com/).
