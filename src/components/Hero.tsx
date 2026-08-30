@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedinIn, FaMapPin, FaRegFileAlt } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import CopyEmailButton from './CopyEmailButton'
 import GitHubActivity from './GitHubActivity'
 import LeafField from './LeafField'
@@ -33,6 +34,10 @@ function Hero() {
             <a href="https://www.linkedin.com/in/evanpersinger/" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <LeafField />
               <FaLinkedinIn className="social-icon linkedin-icon" aria-hidden="true" />
+            </a>
+            <a href="https://x.com/Evan__Persinger" className="hero-link hero-icon-link" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <LeafField />
+              <FaXTwitter className="social-icon" aria-hidden="true" />
             </a>
             <CopyEmailButton />
           </div>
