@@ -58,10 +58,11 @@ body::after {
   --bg-card: #0f1a13;
   --border-color: #24352a;
 
-  /* Semi-transparent fill for the framed boxes. Deliberately lighter than
-     --bg-primary: tinting with the page's own #0b140e composites straight back
-     to that color and shows nothing at all. */
-  --card-bg: rgba(38, 60, 46, 0.28);
+  /* Fill for the framed boxes. Still lighter than --bg-primary, since tinting
+     with the page's own #0b140e composites straight back to that color and shows
+     nothing at all, but the high alpha keeps the fern backdrop from reading
+     through the panel. */
+  --card-bg: rgba(17, 30, 22, 0.8);
 
   /* Thin log border frame, reused by any box that wants the nature border
      (Experience, Education, TechStack, Projects). Rails along each edge, sawn
