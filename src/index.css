@@ -58,10 +58,9 @@ body::after {
   --bg-card: #0f1a13;
   --border-color: #24352a;
 
-  /* Fill for the framed boxes. Still lighter than --bg-primary, since tinting
-     with the page's own #0b140e composites straight back to that color and shows
-     nothing at all, but the high alpha keeps the fern backdrop from reading
-     through the panel. */
+  /* Fill for the framed boxes. Kept lighter than --bg-primary because tinting
+     with the page's own #0b140e composites straight back to it and shows nothing;
+     the high alpha is what stops the fern backdrop reading through. */
   --card-bg: rgba(17, 30, 22, 0.8);
 
   /* Thin log border frame, reused by any box that wants the nature border

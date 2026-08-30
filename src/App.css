@@ -2,10 +2,6 @@
   min-height: 100vh;
 }
 
-main {
-  margin-top: 0;
-}
-
 /* Left alignment baseline: padding-left: 60px across all sections to align with profile pic */
 section {
   padding: 80px 80px 80px 60px;
@@ -23,7 +19,6 @@ section {
   font-weight: 700;
 }
 
-/* Left alignment baseline: padding-left: 60px to align with hero profile pic */
 .education-experience-container {
   display: grid;
   /* 1.82fr lands TechStack on ~580px at the 1700px max-width. Measured in Inter,

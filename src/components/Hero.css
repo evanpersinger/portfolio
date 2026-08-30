@@ -32,9 +32,8 @@
 
 /* min-width keeps each hero-info line on a single row. Without it flexbox
    squeezes this column to its min-content width (~348px) because the GitHub
-   calendar next to it never shrinks, and the longest lines wrap. The 490px
-   value was sized for the since-removed BizTrip line (~470px); it's now
-   looser than the remaining lines strictly need. */
+   calendar next to it never shrinks, and the longest lines wrap. 490px is
+   more headroom than the current lines need. */
 .hero-right {
   flex: 1;
   min-width: 490px;

@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaGithub, FaLinkedinIn, FaMapPin, FaRegFileAlt } from 'react-icons/fa'
 import CopyEmailButton from './CopyEmailButton'
 import GitHubActivity from './GitHubActivity'
