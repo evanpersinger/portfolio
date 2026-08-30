@@ -7,7 +7,7 @@ function Experience() {
       title: 'Backend Engineering Intern',
       company: 'BizTrip AI',
       location: 'San Francisco, CA',
-      period: 'January 2026 - Present',
+      period: 'January 2026 - August 2026',
       description: [
         'Created an automated hotel price-drop rebooking feature and reusable Slack alerting service for an AI travel-booking platform.',
         'Improved map-based hotel search, fixing stale/incomplete results and adding on-demand "search this area" functionality.',
@@ -19,7 +19,7 @@ function Experience() {
       title: 'Data Science Intern',
       company: 'BizTrip AI',
       location: 'San Francisco, CA',
-      period: 'May 2025 - September 2025',
+      period: 'May 2025 - August 2025',
       description: [
         'Utilized Python and SQL to build a custom AI analytics agent enabling clients to query complex travel datasets using natural language.',
         'Created data pipelines to ingest and normalize historical travel data (flights, hotels, rental cars) used by the BizTrip AI travel planner.',
