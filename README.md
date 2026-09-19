@@ -16,4 +16,4 @@ Live at [portfolio-sable-seven-14.vercel.app](https://portfolio-sable-seven-14.v
 
 ## Credits
 
-Fern background photo by Kendal James on [Unsplash](https://unsplash.com/).
+Fern background photo by [Preethi Viswanathan](https://unsplash.com/@sallybrad2016) on [Unsplash](https://unsplash.com/).
