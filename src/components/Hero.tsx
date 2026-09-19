@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedinIn, FaMapPin, FaRegFileAlt } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import CopyEmailButton from './CopyEmailButton'
-import GitHubActivity from './GitHubActivity'
 import LeafField from './LeafField'
+import Terminal from './Terminal'
 import './Hero.css'
 
 function Hero() {
@@ -16,7 +16,7 @@ function Hero() {
           <h1 className="hero-title">
             <span className="gradient-text">Evan Persinger</span>
           </h1>
-          <p className="hero-about">21 year old backend engineer</p>
+          <p className="hero-about">21-Year-Old Backend Engineer</p>
           <div className="hero-info">
             <p className="hero-item">Data Science Student at Western University<img src="/icons/uwo_icon.png" alt="Western University" className="company-icon" /></p>
             <p className="hero-item">San Francisco, CA<FaMapPin className="location-icon" aria-hidden="true" /><img src="/icons/Niners.png" alt="San Francisco 49ers" className="niners-icon" /></p>
@@ -42,7 +42,7 @@ function Hero() {
             <CopyEmailButton />
           </div>
         </div>
-        <GitHubActivity />
+        <Terminal />
       </div>
     </section>
   )
