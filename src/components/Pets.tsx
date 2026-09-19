@@ -1,10 +1,15 @@
+import { Fragment } from 'react'
+import Terminal from './Terminal'
 import './Pets.css'
+
+// The terminal takes the top-right cell (4th on the first row of the 4-column
+// grid), which is why pet-4 sits at the end of this list.
+const TERMINAL_INDEX = 3
 
 const PETS = [
   '/pets/pet-1.jpg',
   '/pets/pet-2.jpg',
   '/pets/pet-3.jpg',
-  '/pets/pet-4.jpg',
   '/pets/pet-5.jpg',
   '/pets/pet-6.jpg',
   '/pets/pet-7.jpg',
@@ -25,14 +30,18 @@ const PETS = [
   '/pets/pet-22.jpg',
   '/pets/pet-23.jpg',
   '/pets/pet-24.jpg',
+  '/pets/pet-4.jpg',
 ]
 
 function Pets() {
   return (
     <section id="pets" className="pets">
       <div className="pets-grid">
-        {PETS.map((image) => (
-          <img src={image} alt="Pet photo" className="pet-photo" loading="lazy" key={image} />
+        {PETS.map((image, index) => (
+          <Fragment key={image}>
+            {index === TERMINAL_INDEX && <Terminal />}
+            <img src={image} alt="Pet photo" className="pet-photo" loading="lazy" />
+          </Fragment>
         ))}
       </div>
     </section>

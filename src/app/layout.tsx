@@ -1,5 +1,6 @@
 import { Fraunces, Inter } from 'next/font/google'
 import Nav from '../components/Nav'
+import { TerminalProvider } from '../components/Terminal'
 import '../index.css'
 import '../App.css'
 
@@ -31,7 +32,9 @@ export default function RootLayout({
       <body>
         <Nav />
         <div className="App">
-          <main>{children}</main>
+          <main>
+            <TerminalProvider>{children}</TerminalProvider>
+          </main>
         </div>
       </body>
     </html>

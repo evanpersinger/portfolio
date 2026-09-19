@@ -1,3 +1,16 @@
+/* Opts out of the site-wide section max-width so the terminal sits at the right
+   edge of the page, like on the Profile page. */
+.projects {
+  max-width: none;
+}
+
+.projects-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: start;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -43,4 +56,10 @@
   border-radius: 20px;
   font-size: 0.875rem;
   border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
 }

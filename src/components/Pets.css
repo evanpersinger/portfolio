@@ -11,6 +11,12 @@
   max-width: 1700px;
 }
 
+/* The terminal fills its grid cell (a square, like the photos) instead of using
+   its default 460px width. */
+.pets-grid .terminal-window {
+  width: 100%;
+}
+
 /* Square cells: most of these photos are 3:4 portrait, so a square crops ~25%
    instead of the ~53% a fixed-height landscape box was taking. */
 .pet-photo {

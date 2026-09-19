@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
+import type { Dispatch, MutableRefObject, ReactNode, SetStateAction } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import './Terminal.css'
 
@@ -20,7 +21,19 @@ const ROOT_SECTION_IDS: Record<string, string> = {
   'tech-stack': 'tech-stack',
 }
 
+const ENTRIES = ['experience', 'education', 'tech-stack', 'projects', 'pets']
+
 const HELP_TEXT = 'Commands: ls, cd <name>, find <term>, clear, help'
+
+function entryLabel(name: string): string {
+  return name in SUBFOLDERS ? `${name}/` : name
+}
+
+function commonPrefix(a: string, b: string): string {
+  let i = 0
+  while (i < a.length && i < b.length && a[i] === b[i]) i++
+  return a.slice(0, i)
+}
 
 function dirForPath(pathname: string): Dir {
   if (pathname === '/projects') return 'projects'
@@ -34,13 +47,38 @@ function promptPath(dir: Dir): string {
 
 type Line = { prompt: boolean; text: string; path: string }
 
+// Lives in the layout, above the pages, so the history and a pending scroll
+// survive `cd` switching routes (each route mounts its own <Terminal>).
+type Session = {
+  history: Line[]
+  setHistory: Dispatch<SetStateAction<Line[]>>
+  pendingScroll: MutableRefObject<string | null>
+}
+
+const SessionContext = createContext<Session | null>(null)
+
+export function TerminalProvider({ children }: { children: ReactNode }) {
+  const [history, setHistory] = useState<Line[]>([])
+  const pendingScroll = useRef<string | null>(null)
+  return (
+    <SessionContext.Provider value={{ history, setHistory, pendingScroll }}>
+      {children}
+    </SessionContext.Provider>
+  )
+}
+
+function useSession(): Session {
+  const session = useContext(SessionContext)
+  if (!session) throw new Error('Terminal must be rendered inside TerminalProvider')
+  return session
+}
+
 function Terminal() {
   const router = useRouter()
   const pathname = usePathname()
   const dir = dirForPath(pathname)
-  const [history, setHistory] = useState<Line[]>([])
+  const { history, setHistory, pendingScroll } = useSession()
   const [input, setInput] = useState('')
-  const pendingScroll = useRef<string | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const bodyRef = useRef<HTMLDivElement>(null)
 
@@ -81,16 +119,19 @@ function Terminal() {
         break
       case 'ls':
         if (dir === 'root') {
-          lines.push('experience  education  tech-stack  projects/  pets/')
+          lines.push(ENTRIES.map(entryLabel).join('  '))
         }
         break
       case 'cd': {
-        if (!arg || arg === '~' || arg === '/' || arg === '..' || arg === 'root') {
+        // `ls` prints folders as `pets/`, and a Mac's shell ignores case, so
+        // accept `pets/`, `./pets`, `~/pets` and `Pets` too.
+        const target = arg.replace(/^(~\/|\.\/|\/)/, '').replace(/\/+$/, '').toLowerCase()
+        if (!target || target === '~' || target === '..' || target === 'root') {
           if (dir !== 'root') router.push('/')
-        } else if (arg === 'projects' || arg === 'pets') {
-          router.push(SUBFOLDERS[arg])
-        } else if (arg in ROOT_SECTION_IDS) {
-          scrollToSection(ROOT_SECTION_IDS[arg])
+        } else if (target === 'projects' || target === 'pets') {
+          router.push(SUBFOLDERS[target])
+        } else if (Object.hasOwn(ROOT_SECTION_IDS, target)) {
+          scrollToSection(ROOT_SECTION_IDS[target])
         } else {
           lines.push(`cd: no such file or directory: ${arg}`)
         }
@@ -100,8 +141,7 @@ function Terminal() {
         if (!arg) {
           lines.push('usage: find <term>')
         } else {
-          const names = ['experience', 'education', 'tech-stack', 'projects', 'pets']
-          const matches = names.filter((name) => name.includes(arg))
+          const matches = ENTRIES.filter((name) => name.includes(arg))
           lines.push(matches.length ? matches.join('  ') : `find: no matches for "${arg}"`)
         }
         break
@@ -120,10 +160,36 @@ function Terminal() {
     ])
   }
 
+  // Only takes over Tab while a `cd` is being typed, so Tab still moves focus
+  // out of the terminal for everyone else.
+  function completeCd(e: React.KeyboardEvent<HTMLInputElement>) {
+    const cd = input.match(/^cd(?:\s+(.*))?$/)
+    if (!cd) return
+    e.preventDefault()
+
+    const partial = cd[1] ?? ''
+    const candidates = dir === 'root' ? ENTRIES : [...ENTRIES, '..']
+    const matches = candidates.filter((name) => name.startsWith(partial))
+    if (matches.length === 0) return
+
+    const line = `cd ${matches.reduce(commonPrefix)}`
+    setInput(line)
+    if (matches.length > 1) {
+      const path = promptPath(dir)
+      setHistory((prev) => [
+        ...prev,
+        { prompt: true, text: line, path },
+        { prompt: false, text: matches.map(entryLabel).join('  '), path },
+      ])
+    }
+  }
+
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (e.key === 'Enter') {
       run(input)
       setInput('')
+    } else if (e.key === 'Tab') {
+      completeCd(e)
     }
   }
 
