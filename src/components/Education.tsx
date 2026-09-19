@@ -1,15 +1,7 @@
+import { education } from '../data/portfolio'
 import './Education.css'
 
 function Education() {
-  const education = [
-    {
-      school: 'Western University',
-      major: 'B.S. in Data Science',
-      location: 'London, Ontario, Canada',
-      graduation: 'Expected 2028'
-    }
-  ]
-
   return (
     <section id="education" className="education">
       <h2 className="section-title">Education</h2>
