@@ -1,10 +1,10 @@
-/* Sits in the hero flex row next to the GitHub calendar for now, placement
-   isn't final. flex-basis matches .github-activity's so the two balance.
-   Styled to look like a real macOS Terminal.app window (black bg, gray
-   chrome) rather than the site's green theme. */
+/* Sits in the hero flex row, placement isn't final. Styled to look like a
+   real macOS Terminal.app window (black bg, gray chrome) rather than the
+   site's green theme. */
 .terminal-window {
   width: 460px;
-  height: 460px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -24,36 +24,19 @@
   border-bottom: 1px solid #222;
 }
 
-.terminal-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.terminal-dot-red {
-  background-color: #ff5f56;
-}
-
-.terminal-dot-yellow {
-  background-color: #ffbd2e;
-}
-
-.terminal-dot-green {
-  background-color: #27c93f;
-}
-
 .terminal-titlebar-label {
   flex: 1;
   text-align: center;
   font-size: 0.8rem;
   color: #c7c7c7;
-  margin-right: 36px;
 }
 
 .terminal-body {
+  position: relative;
   flex: 1;
   padding: 16px;
-  overflow: hidden;
+  overflow-y: auto;
+  cursor: text;
 }
 
 .terminal-line {
@@ -76,10 +59,25 @@
   display: inline-block;
   width: 8px;
   height: 1.1rem;
-  margin-left: 8px;
+  margin-left: 2px;
   background-color: #f2f2f2;
   vertical-align: text-bottom;
   animation: terminal-blink 1s step-end infinite;
+}
+
+.terminal-hidden-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  opacity: 0;
 }
 
 @keyframes terminal-blink {

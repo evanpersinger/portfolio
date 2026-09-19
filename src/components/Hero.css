@@ -1,12 +1,9 @@
-/* Left alignment baseline: padding-left: 60px to match all other sections */
-/* Matches .education-experience-container below, so the hero and the sections
-   under it end at the same right edge instead of the hero stopping 500px short */
+/* Side padding comes from the page gutter on <body>, so none here. max-width is
+   the old 1700px minus the 140px of side padding this used to carry. */
 .hero {
   padding-top: 60px;
   padding-bottom: 40px;
-  padding-left: 60px !important;
-  padding-right: 80px !important;
-  max-width: 1700px;
+  max-width: 1560px;
 }
 
 /* wrap drops the terminal onto its own row rather than letting it get clipped
@@ -231,16 +228,6 @@
 }
 
 @media (max-width: 768px) {
-  /* 60px + 80px of padding leaves a 390px phone only 250px of content, narrower
-     than the photo, the text column and the calendar all are. App.css's mobile
-     `section { padding: 60px 20px }` can't do this job: .hero (0,1,0) outranks
-     `section` (0,0,1) on specificity, so the override has to be written against
-     .hero, and !important because the base rule uses it. */
-  .hero {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
   /* nowrap matters here: column direction inherits flex-wrap: wrap from the base
      rule, and a wrapping column packs overflow into a second column rather than
      stacking, which pushed .hero-right off the right edge of the screen. */

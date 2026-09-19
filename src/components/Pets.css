@@ -1,4 +1,4 @@
-/* Opt out of the site-wide `section { max-width: 1200px }` so the grid can use
+/* Opt out of the site-wide `section { max-width: 1060px }` so the grid can use
    the window width instead of leaving ~800px empty on a wide screen. */
 .pets {
   max-width: none;

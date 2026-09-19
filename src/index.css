@@ -13,6 +13,7 @@ body {
   color: #e8f0ea;
   line-height: 1.6;
   font-weight: 600;
+  padding: var(--page-gutter);
 }
 
 /* Headings run on the serif; body copy stays on the sans. */
@@ -48,7 +49,18 @@ body::after {
   pointer-events: none;
 }
 
+/* PAGE GUTTER: a fixed band of empty space around every page, equal on all four
+   sides. It is the padding on <body>, so nothing sits inside it. Do not put
+   anything in it: no content, no absolutely/fixed-positioned elements, no
+   negative margins or full-bleed children that reach into it. Sections and
+   components must not add their own outer left/right padding to "make room",
+   the gutter already is that room. Change the size here, in one place.
+   The ONE exception is the Profile/Projects/Pets nav bar, which sits closer to
+   the top edge (--nav-top). It is handled by a single margin in Nav.css; nothing
+   else gets an exception. */
 :root {
+  --page-gutter: 75px;
+  --nav-top: 24px;
   --primary-color: #e8f0ea;
   --secondary-color: #cfe0d5;
   --text-primary: #e8f0ea;
@@ -91,4 +103,11 @@ a {
 
 a:hover {
   color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 20px;
+    --nav-top: 20px;
+  }
 }

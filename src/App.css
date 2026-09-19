@@ -2,11 +2,19 @@
   min-height: 100vh;
 }
 
-/* Left alignment baseline: padding-left: 60px across all sections to align with profile pic */
+/* No outer left/right padding: the page gutter on <body> provides it (see
+   --page-gutter in index.css). max-width is the old 1200px minus the 140px of
+   side padding this used to carry, so content width is unchanged. */
 section {
-  padding: 80px 80px 80px 60px;
-  max-width: 1200px;
+  padding: 80px 0;
+  max-width: 1060px;
   margin: 0;
+}
+
+/* Last block on a page drops its bottom padding so the space under it is exactly
+   the gutter, matching the sides. Beats the class rules below on specificity. */
+main > :last-child {
+  padding-bottom: 0;
 }
 
 /* padding-left matches the cards' inner padding so titles line up with card text */
@@ -27,9 +35,9 @@ section {
      together instead of TechStack bullying the other two. */
   grid-template-columns: 2fr 1fr minmax(580px, 1.82fr);
   gap: 32px;
-  max-width: 1700px;
+  max-width: 1600px;
   margin: 0;
-  padding: 0 40px 80px 60px;
+  padding: 0 0 80px;
 }
 
 .education-experience-container > section {
@@ -54,14 +62,14 @@ section {
 
 @media (max-width: 768px) {
   section {
-    padding: 60px 20px;
+    padding: 60px 0;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
 
   .education-experience-container {
-    padding: 60px 20px;
+    padding: 60px 0;
   }
 }

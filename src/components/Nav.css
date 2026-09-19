@@ -1,8 +1,10 @@
+/* The one sanctioned exception to the page gutter (see index.css): the nav bar
+   is pulled up into the top gutter so it sits --nav-top from the screen edge. */
 .site-nav {
   display: flex;
   justify-content: center;
   gap: 16px;
-  padding: 24px 80px 0 60px;
+  margin-top: calc(var(--nav-top) - var(--page-gutter));
 }
 
 .site-nav-link {
@@ -22,7 +24,6 @@
 
 @media (max-width: 768px) {
   .site-nav {
-    padding: 20px 20px 0;
     justify-content: center;
     flex-wrap: wrap;
   }
