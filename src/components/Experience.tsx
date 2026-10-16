@@ -1,4 +1,5 @@
 import { experiences } from '../data/portfolio'
+import PlaneButton from './PlaneButton'
 import './Experience.css'
 
 function Experience() {
@@ -9,7 +10,10 @@ function Experience() {
         {experiences.map((exp, index) => (
           <div key={index} className="experience-timeline-item">
             <div className="experience-timeline-content log-box">
-              <h3 className="experience-title">{exp.title}</h3>
+              <div className="experience-title-row">
+                <h3 className="experience-title">{exp.title}</h3>
+                {exp.plane && <PlaneButton />}
+              </div>
               <div className="experience-meta">
                 <span className="company">{exp.company}</span>
                 <span className="location">{exp.location}</span>

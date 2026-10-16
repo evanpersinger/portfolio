@@ -1,6 +1,7 @@
 export const experiences = [
   {
     title: 'Backend Engineering Intern',
+    plane: true,
     company: 'BizTrip AI',
     location: 'San Francisco, CA',
     period: 'January 2026 - August 2026',

@@ -1,0 +1,41 @@
+.plane-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+/* FaPlane is a top-down plane that points right, which is also the direction
+   the loop starts in, so it needs no rotation at rest. */
+.plane-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  transition: transform 0.2s;
+}
+
+.plane-button:hover .plane-icon {
+  transform: scale(1.15);
+}
+
+/* The loop is the button spinning clockwise around a point 40px below it, so the
+   path is an exact circle at constant speed and the nose always points along it,
+   like a plane banking right. It starts and ends pointing right, so nothing snaps
+   back. z-index lifts the plane above the card text while it flies. */
+.plane-button.flying {
+  z-index: 5;
+  transform-origin: 50% calc(50% + 40px);
+  animation: plane-loop 1.4s linear;
+}
+
+@keyframes plane-loop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
