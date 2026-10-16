@@ -35,7 +35,7 @@ main > :last-child {
      together instead of TechStack bullying the other two. */
   grid-template-columns: 2fr 1fr minmax(580px, 1.82fr);
   gap: 32px;
-  max-width: 1600px;
+  max-width: none;
   margin: 0;
   padding: 0 0 80px;
 }

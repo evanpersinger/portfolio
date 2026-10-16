@@ -1,9 +1,11 @@
-/* Side padding comes from the page gutter on <body>, so none here. max-width is
-   the old 1700px minus the 140px of side padding this used to carry. */
+/* Side padding comes from the page gutter on <body>, so none here. No max-width
+   cap: on a wide viewport (or a zoomed-out browser) a cap left the terminal short
+   of the right gutter and a wide empty band down the right side. `none` is needed
+   to beat the site-wide `section { max-width: 1060px }`. */
 .hero {
   padding-top: 60px;
   padding-bottom: 40px;
-  max-width: 1560px;
+  max-width: none;
 }
 
 /* wrap drops the terminal onto its own row rather than letting it get clipped
@@ -225,6 +227,16 @@
 
 .flag-icon + .flag-icon {
   margin-left: 4px;
+}
+
+/* Wide viewports have room, so the photo and text column scale up together.
+   `zoom` scales every size in them (images, fonts, icons, gaps) with one number.
+   Below 1700px the terminal would drop onto its own row, so it stays at 1. */
+@media (min-width: 1700px) {
+  .hero-left,
+  .hero-right {
+    zoom: 1.3;
+  }
 }
 
 @media (max-width: 768px) {
