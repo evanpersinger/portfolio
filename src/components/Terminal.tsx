@@ -58,7 +58,7 @@ const HELP_LINES = [
   'Tab completes, up/down recalls history',
 ]
 
-const WHOAMI = 'Evan Persinger, 21-Year-Old Backend Engineer and Data Science student at Western University'
+const WHOAMI = 'Evan Persinger, 22-Year-Old Data Science student at Western University'
 
 // Names are matched in lowercase but shown capitalized, like folders on a Mac.
 function display(name: string): string {

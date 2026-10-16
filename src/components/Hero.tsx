@@ -16,7 +16,7 @@ function Hero() {
           <h1 className="hero-title">
             <span className="gradient-text">Evan Persinger</span>
           </h1>
-          <p className="hero-about">21-Year-Old Backend Engineer</p>
+          <p className="hero-about">22-Year-Old Data Science Student</p>
           <div className="hero-info">
             <p className="hero-item">Data Science Student at Western University<img src="/icons/uwo_icon.png" alt="Western University" className="company-icon" /></p>
             <p className="hero-item">San Francisco, CA<FaMapPin className="location-icon" aria-hidden="true" /><img src="/icons/Niners.png" alt="San Francisco 49ers" className="niners-icon" /></p>
