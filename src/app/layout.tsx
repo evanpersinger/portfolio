@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
 import Nav from '../components/Nav'
 import { TerminalProvider } from '../components/Terminal'
@@ -17,9 +18,20 @@ const fraunces = Fraunces({
   display: 'swap',
 })
 
-export const metadata = {
-  title: 'Evan Persinger | Data Science',
+export const metadata: Metadata = {
+  metadataBase: new URL('https://portfolio-sable-seven-14.vercel.app'),
+  title: {
+    default: 'Evan Persinger | Data Science',
+    template: '%s | Evan Persinger',
+  },
   description: 'Evan Persinger - Data Science Student Portfolio',
+  openGraph: {
+    type: 'website',
+    siteName: 'Evan Persinger',
+  },
+  twitter: {
+    card: 'summary',
+  },
 }
 
 export default function RootLayout({
