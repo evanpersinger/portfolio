@@ -62,14 +62,6 @@
   font-weight: 700;
 }
 
-/* margin-bottom matches .hero-info's gap so all four info rows are evenly spaced. */
-.hero-about {
-  font-size: 1.15rem;
-  color: var(--text-primary);
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
 .hero-info {
   display: flex;
   flex-direction: column;
