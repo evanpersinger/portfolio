@@ -1,3 +1,6 @@
+// Used by the metadata, sitemap and robots. Change it here when the domain does.
+export const siteUrl = 'https://portfolio-sable-seven-14.vercel.app'
+
 export const experiences = [
   {
     title: 'Backend Engineering Intern',

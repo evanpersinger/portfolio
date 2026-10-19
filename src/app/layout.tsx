@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
 import Nav from '../components/Nav'
 import { TerminalProvider } from '../components/Terminal'
+import { siteUrl } from '../data/portfolio'
 import '../index.css'
 import '../App.css'
 
@@ -19,7 +20,7 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portfolio-sable-seven-14.vercel.app'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Evan Persinger | Data Science',
     template: '%s | Evan Persinger',
