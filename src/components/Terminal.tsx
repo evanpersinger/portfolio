@@ -104,7 +104,7 @@ type Session = {
   history: Line[]
   setHistory: Dispatch<SetStateAction<Line[]>>
   commands: MutableRefObject<string[]>
-  pendingScroll: MutableRefObject<string | null>
+  pendingScrollRef: MutableRefObject<string | null>
 }
 
 const SessionContext = createContext<Session | null>(null)
@@ -112,9 +112,9 @@ const SessionContext = createContext<Session | null>(null)
 export function TerminalProvider({ children }: { children: ReactNode }) {
   const [history, setHistory] = useState<Line[]>([])
   const commands = useRef<string[]>([])
-  const pendingScroll = useRef<string | null>(null)
+  const pendingScrollRef = useRef<string | null>(null)
   return (
-    <SessionContext.Provider value={{ history, setHistory, commands, pendingScroll }}>
+    <SessionContext.Provider value={{ history, setHistory, commands, pendingScrollRef }}>
       {children}
     </SessionContext.Provider>
   )
@@ -130,7 +130,7 @@ function Terminal() {
   const router = useRouter()
   const pathname = usePathname()
   const dir = dirForPath(pathname)
-  const { history, setHistory, commands, pendingScroll } = useSession()
+  const { history, setHistory, commands, pendingScrollRef } = useSession()
   const [input, setInput] = useState('')
   const [caret, setCaret] = useState(0)
   // Which past command up/down is showing (null = the line being typed), and
@@ -141,14 +141,14 @@ function Terminal() {
   const bodyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (pendingScroll.current && pathname === '/') {
-      const id = pendingScroll.current
-      pendingScroll.current = null
+    if (pendingScrollRef.current && pathname === '/') {
+      const id = pendingScrollRef.current
+      pendingScrollRef.current = null
       requestAnimationFrame(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
       })
     }
-  }, [pathname])
+  }, [pathname, pendingScrollRef])
 
   // autoFocus would scroll the page down to the terminal on /pets, where it
   // is the last grid cell.
@@ -169,7 +169,7 @@ function Terminal() {
     if (pathname === '/') {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     } else {
-      pendingScroll.current = id
+      pendingScrollRef.current = id
       router.push('/')
     }
   }
