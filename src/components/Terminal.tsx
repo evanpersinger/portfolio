@@ -105,6 +105,7 @@ type Session = {
   setHistory: Dispatch<SetStateAction<Line[]>>
   commands: MutableRefObject<string[]>
   pendingScrollRef: MutableRefObject<string | null>
+  focusOnMountRef: MutableRefObject<boolean>
 }
 
 const SessionContext = createContext<Session | null>(null)
@@ -113,8 +114,11 @@ export function TerminalProvider({ children }: { children: ReactNode }) {
   const [history, setHistory] = useState<Line[]>([])
   const commands = useRef<string[]>([])
   const pendingScrollRef = useRef<string | null>(null)
+  const focusOnMountRef = useRef(false)
   return (
-    <SessionContext.Provider value={{ history, setHistory, commands, pendingScrollRef }}>
+    <SessionContext.Provider
+      value={{ history, setHistory, commands, pendingScrollRef, focusOnMountRef }}
+    >
       {children}
     </SessionContext.Provider>
   )
@@ -130,7 +134,7 @@ function Terminal() {
   const router = useRouter()
   const pathname = usePathname()
   const dir = dirForPath(pathname)
-  const { history, setHistory, commands, pendingScrollRef } = useSession()
+  const { history, setHistory, commands, pendingScrollRef, focusOnMountRef } = useSession()
   const [input, setInput] = useState('')
   const [caret, setCaret] = useState(0)
   // Which past command up/down is showing (null = the line being typed), and
@@ -150,11 +154,15 @@ function Terminal() {
     }
   }, [pathname, pendingScrollRef])
 
-  // autoFocus would scroll the page down to the terminal on /pets, where it
-  // is the last grid cell.
+  // Only a terminal `cd` refocuses the new route's terminal, so a plain page
+  // load leaves focus alone. preventScroll because autoFocus would scroll the
+  // page down to the terminal on /pets, where it is the last grid cell.
   useEffect(() => {
-    inputRef.current?.focus({ preventScroll: true })
-  }, [])
+    if (focusOnMountRef.current) {
+      focusOnMountRef.current = false
+      inputRef.current?.focus({ preventScroll: true })
+    }
+  }, [focusOnMountRef])
 
   useEffect(() => {
     bodyRef.current?.scrollTo({ top: bodyRef.current.scrollHeight })
@@ -165,12 +173,20 @@ function Terminal() {
     setCaret(value.length)
   }
 
+  // Every route mounts its own terminal, so flag that the next one should take
+  // focus and the user can keep typing after `cd`.
+  function navigate(path: string) {
+    if (path === pathname) return
+    focusOnMountRef.current = true
+    router.push(path)
+  }
+
   function scrollToSection(id: string) {
     if (pathname === '/') {
       document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     } else {
       pendingScrollRef.current = id
-      router.push('/')
+      navigate('/')
     }
   }
 
@@ -194,9 +210,9 @@ function Terminal() {
       case 'cd': {
         const target = normalizeArg(arg)
         if (isHome(target)) {
-          if (dir !== 'root') router.push('/')
+          navigate('/')
         } else if (target === 'projects' || target === 'pets') {
-          router.push(SUBFOLDERS[target])
+          navigate(SUBFOLDERS[target])
         } else if (Object.hasOwn(ROOT_SECTION_IDS, target)) {
           scrollToSection(ROOT_SECTION_IDS[target])
         } else {
