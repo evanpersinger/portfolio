@@ -25,6 +25,15 @@ pnpm dev
 
 Runs at http://localhost:3001. Use `pnpm build` and `pnpm start` for a production build.
 
+Requires Node 24 (see `.nvmrc`). Run `pnpm lint` and `pnpm typecheck` to check the code.
+
+## Project Structure
+
+- `src/app/`: routes (home, `/projects`, `/pets`) and the root layout
+- `src/components/`: one component per feature, each with its own `.css` file
+- `src/data/portfolio.ts`: experience, education and tech stack content
+- `public/`: static assets (icons, pet photos, resume PDF)
+
 ## Deployment
 
 Live at [portfolio-sable-seven-14.vercel.app](https://portfolio-sable-seven-14.vercel.app/), deployed on Vercel.
