@@ -1,7 +1,31 @@
 // Used by the metadata, sitemap and robots. Change it here when the domain does.
 export const siteUrl = 'https://portfolio-sable-seven-14.vercel.app'
 
-export const experiences = [
+export interface Experience {
+  title: string
+  plane?: boolean
+  company: string
+  location: string
+  period: string
+  description: string[]
+  technologies: string[]
+}
+
+export interface Education {
+  school: string
+  major: string
+  location: string
+  graduation: string
+}
+
+export interface Project {
+  title: string
+  description: string
+  tech: string[]
+  link: string
+}
+
+export const experiences: Experience[] = [
   {
     title: 'Backend Engineering Intern',
     plane: true,
@@ -29,7 +53,7 @@ export const experiences = [
   }
 ]
 
-export const education = [
+export const education: Education[] = [
   {
     school: 'Western University',
     major: 'B.S. in Data Science',
@@ -37,6 +61,9 @@ export const education = [
     graduation: 'Expected 2028'
   }
 ]
+
+// Empty until the first project is added.
+export const projects: Project[] = []
 
 // Order drives the TechStack row layout together with its .tech-break markers:
 // row 1: Python, SQL, Jupyter, Git | row 2: AWS Postgres, PostgreSQL | row 3: Docker, FastAPI

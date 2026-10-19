@@ -1,14 +1,13 @@
+import { projects } from '../data/portfolio'
 import Terminal from './Terminal'
 import './Projects.css'
-
-const PROJECTS: { title: string; description: string; tech: string[]; link: string }[] = []
 
 function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="projects-layout">
         <div className="projects-grid">
-          {PROJECTS.map((project) => (
+          {projects.map((project) => (
             <a
               href={project.link}
               target="_blank"
