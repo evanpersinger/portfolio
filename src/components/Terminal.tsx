@@ -150,6 +150,12 @@ function Terminal() {
     }
   }, [pathname])
 
+  // autoFocus would scroll the page down to the terminal on /pets, where it
+  // is the last grid cell.
+  useEffect(() => {
+    inputRef.current?.focus({ preventScroll: true })
+  }, [])
+
   useEffect(() => {
     bodyRef.current?.scrollTo({ top: bodyRef.current.scrollHeight })
   }, [history])
@@ -368,7 +374,6 @@ function Terminal() {
             onKeyDown={handleKeyDown}
             onKeyUp={syncCaret}
             onSelect={syncCaret}
-            autoFocus
             spellCheck={false}
             autoComplete="off"
           />
