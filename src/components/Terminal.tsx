@@ -364,15 +364,17 @@ function Terminal() {
         <span className="terminal-titlebar-label">evan@portfolio (zsh)</span>
       </div>
       <div className="terminal-body" ref={bodyRef}>
-        {history.map((line, i) =>
-          line.prompt ? (
-            <p className="terminal-line" key={i}>
-              <span className="terminal-prompt">evan@portfolio {line.path} %</span> {line.text}
-            </p>
-          ) : (
-            <p className="terminal-line terminal-output" key={i}>{line.text}</p>
-          )
-        )}
+        <div role="log" aria-label="Terminal output">
+          {history.map((line, i) =>
+            line.prompt ? (
+              <p className="terminal-line" key={i}>
+                <span className="terminal-prompt">evan@portfolio {line.path} %</span> {line.text}
+              </p>
+            ) : (
+              <p className="terminal-line terminal-output" key={i}>{line.text}</p>
+            )
+          )}
+        </div>
         <p className="terminal-line">
           <span className="terminal-prompt">evan@portfolio {promptPath(dir)} %</span>
           <span className="terminal-typed">{input.slice(0, caret)}</span>
@@ -381,6 +383,7 @@ function Terminal() {
           <input
             ref={inputRef}
             className="terminal-hidden-input"
+            aria-label="Terminal command input"
             value={input}
             onChange={(e) => {
               recallIndex.current = null
