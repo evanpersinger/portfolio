@@ -152,7 +152,7 @@ function Terminal() {
       const id = pendingScrollRef.current
       pendingScrollRef.current = null
       requestAnimationFrame(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+        document.getElementById(id)?.scrollIntoView()
       })
     }
   }, [pathname, pendingScrollRef])
@@ -186,7 +186,7 @@ function Terminal() {
 
   function scrollToSection(id: string) {
     if (pathname === '/') {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+      document.getElementById(id)?.scrollIntoView()
     } else {
       pendingScrollRef.current = id
       navigate('/')

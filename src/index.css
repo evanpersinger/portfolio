@@ -92,8 +92,11 @@ body::after {
   border-radius: 12px;
 }
 
-html {
-  scroll-behavior: smooth;
+/* The terminal's scrollIntoView() calls pass no behavior, so they follow this too. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 a {
