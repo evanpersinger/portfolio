@@ -97,6 +97,9 @@ function promptPath(dir: Dir): string {
 
 type Line = { prompt: boolean; text: string; path: string }
 
+// First line of a fresh session, so visitors can tell the terminal is interactive.
+const WELCOME: Line[] = [{ prompt: false, text: "Type 'help' to get started", path: '~' }]
+
 // Lives in the layout, above the pages, so the output, the command history and
 // a pending scroll survive `cd` switching routes (each route mounts its own
 // <Terminal>).
@@ -111,7 +114,7 @@ type Session = {
 const SessionContext = createContext<Session | null>(null)
 
 export function TerminalProvider({ children }: { children: ReactNode }) {
-  const [history, setHistory] = useState<Line[]>([])
+  const [history, setHistory] = useState<Line[]>(WELCOME)
   const commands = useRef<string[]>([])
   const pendingScrollRef = useRef<string | null>(null)
   const focusOnMountRef = useRef(false)
