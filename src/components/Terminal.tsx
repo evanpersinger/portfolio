@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useRef, useState } from 'react'
-import type { Dispatch, MutableRefObject, ReactNode, SetStateAction } from 'react'
+import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import { education, experiences, technologies } from '../data/portfolio'
 import './Terminal.css'
@@ -103,9 +103,9 @@ type Line = { prompt: boolean; text: string; path: string }
 type Session = {
   history: Line[]
   setHistory: Dispatch<SetStateAction<Line[]>>
-  commands: MutableRefObject<string[]>
-  pendingScrollRef: MutableRefObject<string | null>
-  focusOnMountRef: MutableRefObject<boolean>
+  commands: RefObject<string[]>
+  pendingScrollRef: RefObject<string | null>
+  focusOnMountRef: RefObject<boolean>
 }
 
 const SessionContext = createContext<Session | null>(null)
