@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import Nav from '../components/Nav'
 import { TerminalProvider } from '../components/Terminal'
 import { siteUrl } from '../data/portfolio'
@@ -49,6 +51,8 @@ export default function RootLayout({
             <TerminalProvider>{children}</TerminalProvider>
           </main>
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
