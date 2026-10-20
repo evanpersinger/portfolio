@@ -35,7 +35,6 @@ export const experiences: Experience[] = [
     description: [
       'Built an opt-in feature that rebooks hotel stays at a lower rate when the price drops. A daily job re-prices refundable bookings through Sabre and only rebooks if the free-cancel window is still open, the property is the same, and the savings are big enough. Added an admin dashboard that shows price history for each stay.',
       'Reduced AWS costs by about $500/month by moving data from AWS to encrypted DuckDB files, and kept the analytics agent working against it.',
-      'Built calendar integrations for the web app. Users can subscribe to an ICS feed that stays in sync when a trip changes or gets cancelled, and connect their Google or Outlook calendar through OAuth.',
       'Built two flight fare features in the travel agent. It recommends the lowest logical fare and offers it as a cheaper alternative the user can accept or decline. I also added an opt-in “Show all fares” view that goes from one fare per cabin to the full set of branded fares.'
     ],
     technologies: ['Python', 'TypeScript', 'Docker', 'FastAPI', 'PostgreSQL']
