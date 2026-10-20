@@ -16,17 +16,6 @@ A personal portfolio website built with Next.js, React, and TypeScript.
 - GitHub activity calendar
 - Interactive terminal (`ls`, `cd`, `cat`, `help`, and more) for navigating the site
 
-## Getting Started
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Runs at http://localhost:3001. Use `pnpm build` and `pnpm start` for a production build.
-
-Requires Node 24 (see `.nvmrc`). Run `pnpm lint` and `pnpm typecheck` to check the code.
-
 ## Project Structure
 
 - `src/app/`: routes (home, `/projects`, `/pets`) and the root layout
