@@ -7,7 +7,7 @@ const eslintConfig = defineConfig([
   ...nextTs,
   {
     rules: {
-      // Raw <img> tags are used across the site; switching to next/image is issue #3.
+      // Raw <img> tags are used on purpose: the images are already small, so next/image gains little.
       '@next/next/no-img-element': 'off',
     },
   },
