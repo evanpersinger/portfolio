@@ -1,0 +1,28 @@
+.not-found-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.not-found-text {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+/* Underlined because the global link style has no underline, so it would read
+   as plain text. */
+.not-found-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.not-found-link:hover {
+  color: #8fd6ab;
+}
+
+@media (max-width: 768px) {
+  .not-found-title {
+    font-size: 2rem;
+  }
+}
