@@ -33,9 +33,10 @@ export const experiences: Experience[] = [
     location: 'San Francisco, CA',
     period: 'January 2026 - August 2026',
     description: [
-      'Created an automated hotel price-drop rebooking feature and reusable Slack alerting service for an AI travel-booking platform.',
-      'Improved map-based hotel search, fixing stale/incomplete results and adding on-demand "search this area" functionality.',
-      'Implemented an ICS calendar along with booking email confirmations, allowing users to track the status of their trip.'
+      'Built an opt-in feature that rebooks hotel stays at a lower rate when the price drops. A daily job re-prices refundable bookings through Sabre and only rebooks if the free-cancel window is still open, the property is the same, and the savings are big enough. Added an admin dashboard that shows price history for each stay.',
+      'Reduced AWS costs by about $500/month by moving data from AWS to encrypted DuckDB files, and kept the analytics agent working against it.',
+      'Built calendar integrations for the web app. Users can subscribe to an ICS feed that stays in sync when a trip changes or gets cancelled, and connect their Google or Outlook calendar through OAuth.',
+      'Built two flight fare features in the travel agent. It recommends the lowest logical fare and offers it as a cheaper alternative the user can accept or decline. I also added an opt-in “Show all fares” view that goes from one fare per cabin to the full set of branded fares.'
     ],
     technologies: ['Python', 'TypeScript', 'Docker', 'FastAPI', 'PostgreSQL']
   },
@@ -46,8 +47,8 @@ export const experiences: Experience[] = [
     period: 'May 2025 - August 2025',
     description: [
       'Utilized Python and SQL to build a custom AI analytics agent enabling clients to query complex travel datasets using natural language.',
-      'Created data pipelines to ingest and normalize historical travel data (flights, hotels, rental cars) used by the BizTrip AI travel planner.',
-      'Built a feature to enable ad-hoc upload of new datasets into the analytics agent. Datasets are automatically parsed and stored and made available for analytics by the AI agent.'
+      'Built a Sabre API pipeline that matches a client’s hotel lists to Sabre hotel codes by location and name, with match scoring.',
+      'Wrote scripts to clean and normalize a client’s historical air, hotel, and car data. They fix cost formatting, expand rates, parse routes and airports, and validate the schema.'
     ],
     technologies: ['Python', 'FastAPI', 'AWS Postgres', 'PostgreSQL', 'SQL', 'Docker']
   }
@@ -66,7 +67,7 @@ export const education: Education[] = [
 export const projects: Project[] = []
 
 // Order drives the TechStack row layout together with its .tech-break markers:
-// row 1: Python, SQL, Jupyter, Git | row 2: AWS Postgres, PostgreSQL | row 3: Docker, FastAPI
+// row 1: Python, SQL, Jupyter, Git | row 2: AWS Postgres, PostgreSQL | row 3: Docker, FastAPI, TypeScript
 export const technologies = [
   'Python',
   'SQL',
@@ -75,5 +76,6 @@ export const technologies = [
   'AWS Postgres',
   'PostgreSQL',
   'Docker',
-  'FastAPI'
+  'FastAPI',
+  'TypeScript'
 ] as const

@@ -1,6 +1,6 @@
 import React from 'react'
 import type { IconType } from 'react-icons'
-import { SiPython, SiPostgresql, SiJupyter, SiGit, SiDocker, SiFastapi } from 'react-icons/si'
+import { SiPython, SiPostgresql, SiJupyter, SiGit, SiDocker, SiFastapi, SiTypescript } from 'react-icons/si'
 import { FaDatabase, FaAws } from 'react-icons/fa'
 import { technologies } from '../data/portfolio'
 import './TechStack.css'
@@ -13,7 +13,8 @@ const ICONS: Record<(typeof technologies)[number], IconType> = {
   'AWS Postgres': FaAws,
   PostgreSQL: SiPostgresql,
   Docker: SiDocker,
-  FastAPI: SiFastapi
+  FastAPI: SiFastapi,
+  TypeScript: SiTypescript
 }
 
 function TechStack() {
