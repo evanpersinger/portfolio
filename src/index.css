@@ -64,7 +64,7 @@ body::after {
   --primary-color: #e8f0ea;
   --secondary-color: #cfe0d5;
   --text-primary: #e8f0ea;
-  --text-secondary: #e8f0ea;
+  --text-secondary: #b8c9bd;
   --bg-primary: #0b140e;
   --bg-secondary: #0a120c;
   --bg-card: #0f1a13;
@@ -102,7 +102,7 @@ a {
 }
 
 a:hover {
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
