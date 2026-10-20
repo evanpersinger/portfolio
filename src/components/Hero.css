@@ -43,8 +43,8 @@
 /* No border here: a border would sit between the photo and the green ring and
    read as a gap. The ring is the box-shadow, flush against the image. */
 .profile-image {
-  width: 260px;
-  height: 260px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 0 4px #457a5c, 0 6px 24px rgba(0, 0, 0, 0.45);

@@ -17,7 +17,7 @@
 
 /* The real input is a 1px hidden box, so the ring goes on the whole window. */
 .terminal-window:focus-within {
-  outline: 2px solid #4cd964;
+  outline: 2px solid #457a5c;
   outline-offset: 2px;
 }
 
