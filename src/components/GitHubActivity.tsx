@@ -11,18 +11,21 @@ const GitHubCalendar = dynamic(
   { ssr: false }
 )
 
+const MONTHS_SHOWN = 6
+
 function GitHubActivity() {
   return (
     <section className="github-activity">
       <GitHubCalendar
         username="evanpersinger"
+        errorMessage="GitHub activity couldn't be loaded right now."
         colorScheme="dark"
         blockSize={16}
         blockMargin={5}
         fontSize={16}
         transformData={(contributions) => {
           const cutoff = new Date()
-          cutoff.setMonth(cutoff.getMonth() - 6)
+          cutoff.setMonth(cutoff.getMonth() - MONTHS_SHOWN)
           return contributions.filter((day) => new Date(day.date) >= cutoff)
         }}
       />
