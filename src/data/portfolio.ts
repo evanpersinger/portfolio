@@ -62,8 +62,14 @@ export const education: Education[] = [
   }
 ]
 
-// Empty until the first project is added.
-export const projects: Project[] = []
+export const projects: Project[] = [
+  {
+    title: 'Price Tracking',
+    description: 'Compares grocery and gas prices across Canadian and US stores. Add items from a receipt photo, read by a local open-source vision model.',
+    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Ollama'],
+    link: 'https://github.com/evanpersinger/price-tracking'
+  }
+]
 
 // Order drives the TechStack row layout together with its .tech-break markers:
 // row 1: Python, SQL, Jupyter, Git | row 2: AWS Postgres, PostgreSQL | row 3: Docker, FastAPI, TypeScript
