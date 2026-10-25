@@ -9,14 +9,16 @@ function Projects() {
       <div className="projects-layout">
         <div className="projects-grid">
           {projects.map((project) => (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card log-box"
-              key={project.title}
-            >
-              <FaGithub className="project-github" aria-hidden="true" />
+            <div className="project-card log-box" key={project.title}>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-github"
+                aria-label={`${project.title} on GitHub`}
+              >
+                <FaGithub aria-hidden="true" />
+              </a>
               <h3 className="project-title">{project.title}</h3>
               {project.image && (
                 <img
@@ -31,7 +33,7 @@ function Projects() {
                   <span className="project-tech-tag" key={tag}>{tag}</span>
                 ))}
               </div>
-            </a>
+            </div>
           ))}
         </div>
         <Terminal />
