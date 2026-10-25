@@ -23,6 +23,7 @@ export interface Project {
   description: string
   tech: string[]
   link: string
+  image?: string
 }
 
 export const experiences: Experience[] = [
@@ -67,7 +68,22 @@ export const projects: Project[] = [
     title: 'Price Tracking',
     description: 'Compares grocery and gas prices across Canadian and US stores. Add items from a receipt photo, read by a local open-source vision model.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Ollama'],
-    link: 'https://github.com/evanpersinger/price-tracking'
+    link: 'https://github.com/evanpersinger/price-tracking',
+    image: '/projects/price-tracking.png'
+  },
+  {
+    title: 'File Converter',
+    description: 'Converts files between formats (PDF, Markdown, Word, images, SVG and more) from a local web UI or standalone Python scripts. An LLM tab turns PDFs and handwriting photos into Markdown.',
+    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'Ollama'],
+    link: 'https://github.com/evanpersinger/file-converter',
+    image: '/projects/file-converter.jpg'
+  },
+  {
+    title: 'Typing Practice',
+    description: 'A typing trainer that only drills the words you misspell. An LLM writes practice sentences around them, and words you get right ten times in a row graduate out.',
+    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Tailwind CSS'],
+    link: 'https://github.com/evanpersinger/typing-practice',
+    image: '/projects/typing-practice.png'
   }
 ]
 

@@ -13,7 +13,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 32px;
   max-width: 1200px;
 }
@@ -21,7 +21,7 @@
 .project-card {
   display: block;
   background-color: transparent;
-  padding: 25px;
+  padding: 32px;
   text-decoration: none;
   transition: transform 0.3s;
 }
@@ -31,14 +31,25 @@
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   color: var(--text-primary);
 }
 
+.project-image {
+  display: block;
+  width: min(100%, 48rem);
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background-color: var(--bg-secondary);
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
 .project-description {
   color: var(--text-secondary);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -52,9 +63,9 @@
 .project-tech-tag {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
-  padding: 5px 13px;
+  padding: 6px 15px;
   border-radius: 20px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   border: 1px solid var(--border-color);
 }
 

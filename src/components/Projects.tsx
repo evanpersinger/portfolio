@@ -16,6 +16,13 @@ function Projects() {
               key={project.title}
             >
               <h3 className="project-title">{project.title}</h3>
+              {project.image && (
+                <img
+                  className="project-image"
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                />
+              )}
               <p className="project-description">{project.description}</p>
               <div className="project-tech">
                 {project.tech.map((tag) => (
