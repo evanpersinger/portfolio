@@ -67,14 +67,14 @@ export const projects: Project[] = [
   {
     title: 'Price Tracking',
     description: 'Compares grocery prices.\nTake a photo of a receipt and upload it to add your items.\nReceipts are processed by an LLM.',
-    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Ollama'],
+    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite'],
     link: 'https://github.com/evanpersinger/price-tracking',
     image: '/projects/price-tracking.png'
   },
   {
     title: 'File Converter',
     description: 'Converts files between various file formats.\nLLM powered scripts turn PDFs into Markdown.',
-    tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'Ollama'],
+    tech: ['Python', 'FastAPI', 'React', 'TypeScript'],
     link: 'https://github.com/evanpersinger/file-converter',
     image: '/projects/file-converter.jpg'
   },
