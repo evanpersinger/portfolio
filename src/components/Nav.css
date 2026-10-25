@@ -27,5 +27,12 @@
   .site-nav {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* The bigger desktop buttons don't fit on one row at phone width. */
+  .site-nav-link {
+    font-size: 1rem;
+    padding: 10px 24px;
   }
 }
