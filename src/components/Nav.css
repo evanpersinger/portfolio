@@ -3,15 +3,16 @@
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 20px;
   margin-top: calc(var(--nav-top) - var(--page-gutter));
 }
 
 .site-nav-link {
   color: var(--text-primary);
+  font-size: 1.25rem;
   font-weight: 600;
   text-decoration: none;
-  padding: 10px 24px;
+  padding: 14px 32px;
   border-radius: 8px;
   border: 2px solid #3a6b4f;
   transition: all 0.3s;
