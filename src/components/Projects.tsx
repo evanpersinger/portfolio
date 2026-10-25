@@ -1,3 +1,4 @@
+import { FaGithub } from 'react-icons/fa'
 import { projects } from '../data/portfolio'
 import Terminal from './Terminal'
 import './Projects.css'
@@ -15,6 +16,7 @@ function Projects() {
               className="project-card log-box"
               key={project.title}
             >
+              <FaGithub className="project-github" aria-hidden="true" />
               <h3 className="project-title">{project.title}</h3>
               {project.image && (
                 <img

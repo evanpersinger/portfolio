@@ -19,6 +19,7 @@
 }
 
 .project-card {
+  position: relative;
   display: block;
   background-color: transparent;
   padding: 32px;
@@ -30,9 +31,23 @@
   transform: translateY(-4px);
 }
 
+.project-github {
+  position: absolute;
+  top: calc(32px + 0.6rem);
+  right: 32px;
+  font-size: 2rem;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.project-card:hover .project-github {
+  color: var(--text-primary);
+}
+
 .project-title {
   font-size: 2rem;
   margin-bottom: 10px;
+  padding-right: 3rem;
   color: var(--text-primary);
 }
 
