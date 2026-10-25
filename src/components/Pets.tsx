@@ -3,34 +3,37 @@ import Terminal from './Terminal'
 import './Pets.css'
 
 // The terminal takes the top-right cell (4th on the first row of the 4-column
-// grid), which is why pet-4 sits at the end of this list.
+// grid), which is why pet4 is out of order, after pet24.
 const TERMINAL_INDEX = 3
 
 const PETS = [
-  '/pets/pet-1.jpg',
-  '/pets/pet-2.jpg',
-  '/pets/pet-3.jpg',
-  '/pets/pet-5.jpg',
-  '/pets/pet-6.jpg',
-  '/pets/pet-7.jpg',
-  '/pets/pet-8.jpg',
-  '/pets/pet-9.jpg',
-  '/pets/pet-10.jpg',
-  '/pets/pet-11.jpg',
-  '/pets/pet-12.jpg',
-  '/pets/pet-13.jpg',
-  '/pets/pet-14.jpg',
-  '/pets/pet-15.jpg',
-  '/pets/pet-16.jpg',
-  '/pets/pet-17.jpg',
-  '/pets/pet-18.jpg',
-  '/pets/pet-19.jpg',
-  '/pets/pet-20.jpg',
-  '/pets/pet-21.jpg',
-  '/pets/pet-22.jpg',
-  '/pets/pet-23.jpg',
-  '/pets/pet-24.jpg',
-  '/pets/pet-4.jpg',
+  '/pets/pet1.jpg',
+  '/pets/pet2.jpg',
+  '/pets/pet3.jpg',
+  '/pets/pet5.jpg',
+  '/pets/pet6.jpg',
+  '/pets/pet7.jpg',
+  '/pets/pet8.jpg',
+  '/pets/pet9.jpg',
+  '/pets/pet10.jpg',
+  '/pets/pet11.jpg',
+  '/pets/pet12.jpg',
+  '/pets/pet13.jpg',
+  '/pets/pet14.jpg',
+  '/pets/pet15.jpg',
+  '/pets/pet16.jpg',
+  '/pets/pet17.jpg',
+  '/pets/pet18.jpg',
+  '/pets/pet19.jpg',
+  '/pets/pet20.jpg',
+  '/pets/pet21.jpg',
+  '/pets/pet22.jpg',
+  '/pets/pet23.jpg',
+  '/pets/pet24.jpg',
+  '/pets/pet4.jpg',
+  '/pets/pet25.jpg',
+  '/pets/pet26.jpg',
+  '/pets/pet27.jpg',
 ]
 
 function Pets() {
