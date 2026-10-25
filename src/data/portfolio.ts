@@ -66,21 +66,21 @@ export const education: Education[] = [
 export const projects: Project[] = [
   {
     title: 'Price Tracking',
-    description: 'Compares grocery and gas prices across Canadian and US stores. Add items from a receipt photo, read by a local open-source vision model.',
+    description: 'Compares grocery prices.\nTake a photo of a receipt and upload it to add your items.\nReceipts are processed by an LLM.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Ollama'],
     link: 'https://github.com/evanpersinger/price-tracking',
     image: '/projects/price-tracking.png'
   },
   {
     title: 'File Converter',
-    description: 'Converts files between formats (PDF, Markdown, Word, images, SVG and more) from a local web UI or standalone Python scripts. An LLM tab turns PDFs and handwriting photos into Markdown.',
+    description: 'Converts files between various file formats.\nLLM powered scripts turn PDFs into Markdown.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'Ollama'],
     link: 'https://github.com/evanpersinger/file-converter',
     image: '/projects/file-converter.jpg'
   },
   {
     title: 'Typing Practice',
-    description: 'A typing trainer that only drills the words you misspell. An LLM writes practice sentences around them, and words you get right ten times in a row graduate out.',
+    description: 'A typing trainer that focus on the words you misspell.\nAn LLM writes practice sentences around them.\nIf you spell a word correctly 10 times it gets removed from your weak word list.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Tailwind CSS'],
     link: 'https://github.com/evanpersinger/typing-practice',
     image: '/projects/typing-practice.png'
