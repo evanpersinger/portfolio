@@ -80,7 +80,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Typing Practice',
-    description: 'A typing trainer that focus on the words you misspell.\nAn LLM writes practice sentences around them.\nIf you spell a word correctly 10 times it gets removed from your weak word list.',
+    description: 'A typing trainer that focuses on the words you misspell.\nAn LLM writes practice sentences around them.\nIf you spell a word correctly 10 times in a row, it gets removed from your weak word list.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Tailwind CSS'],
     link: 'https://github.com/evanpersinger/typing-practice',
     image: '/projects/typing-practice.png'
