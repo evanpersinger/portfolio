@@ -27,6 +27,7 @@
   align-items: center;
   align-self: flex-start;
   gap: 16px;
+  margin-top: 70px;
 }
 
 /* min-width keeps each hero-info line on a single row. Without it flexbox
@@ -240,6 +241,10 @@
     flex-wrap: nowrap;
     gap: 30px;
     align-items: center;
+  }
+
+  .hero-left {
+    margin-top: 0;
   }
 
   .hero-right {
