@@ -27,8 +27,8 @@
 
 .project-github {
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 16px;
+  right: 16px;
   display: flex;
   font-size: 3.25rem;
   color: var(--text-primary);
