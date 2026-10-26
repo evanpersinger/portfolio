@@ -2,7 +2,7 @@
    real macOS Terminal.app window (black bg, gray chrome) rather than the
    site's green theme. */
 .terminal-window {
-  width: 460px;
+  width: 400px;
   max-width: 100%;
   aspect-ratio: 1 / 1;
   flex-shrink: 0;
