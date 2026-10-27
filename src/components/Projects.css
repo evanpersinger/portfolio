@@ -22,7 +22,7 @@
   position: relative;
   display: block;
   background-color: transparent;
-  padding: 32px;
+  padding: 16px 32px 32px;
 }
 
 .project-github {
