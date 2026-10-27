@@ -7,15 +7,23 @@
 .pets-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  gap: 2px;
   max-width: 1700px;
 }
 
-/* Square cells: most of these photos are 3:4 portrait, so a square crops ~25%
-   instead of the ~53% a fixed-height landscape box was taking. */
+/* Alone on the top row at the right edge, the photos start on the row below.
+   It comes first in the markup so grid auto-placement gives it row 1. */
+.pets-grid .terminal-window {
+  grid-column: 1 / -1;
+  justify-self: end;
+  margin-bottom: 16px;
+}
+
+/* The files are 1000x750, so 4:3 shows each photo uncropped and reserves its
+   space before it loads. */
 .pet-photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -23,5 +31,11 @@
 @media (max-width: 768px) {
   .pets-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Last on phones, like the terminal on the other pages. */
+  .pets-grid .terminal-window {
+    order: 1;
+    margin-bottom: 0;
   }
 }
