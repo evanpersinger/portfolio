@@ -95,6 +95,16 @@
   50.01%, 100% { color: #f2f2f2; background-color: transparent; }
 }
 
+/* Nudges every terminal up toward the top right corner. A relative offset moves
+   it visually without reflowing the content around it. Skipped on phones, where
+   it sits below the content and would overlap it. */
+@media (min-width: 769px) {
+  .terminal-window {
+    position: relative;
+    top: -40px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .terminal-cursor {
     animation: none;
