@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import type { Dispatch, ReactNode, RefObject, SetStateAction } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { education, experiences, technologies } from '../data/portfolio'
+import { education, experiences, projects, technologies } from '../data/portfolio'
 import './Terminal.css'
 
 // Root ("~") is the profile page. projects/ and pets/ are sibling
@@ -44,13 +44,20 @@ const FILES: Record<string, string[]> = {
 
 const ENTRIES = ['experience', 'education', 'tech-stack', 'projects', 'pets']
 
-const COMMANDS = ['ls', 'cd', 'cat', 'find', 'pwd', 'whoami', 'history', 'clear', 'help']
+// Project names as typed in the terminal: the title lowercased with dashes
+// ("Price Tracking" -> "price-tracking"), which is also the repo name.
+const PROJECT_DETAILS: Record<string, string[]> = Object.fromEntries(
+  projects.map((project) => [project.title.toLowerCase().replace(/\s+/g, '-'), project.details])
+)
+
+const COMMANDS = ['ls', 'cd', 'cat', 'find', 'echo', 'pwd', 'whoami', 'history', 'clear', 'help']
 
 const HELP_LINES = [
   'ls            list this folder',
   'cd <name>     go to a section or folder',
   'cat <name>    print a section',
-  'find <term>   search section names',
+  'find <term>   search section and project names',
+  'echo <text>   print text, or more about a project',
   'pwd           print the current folder',
   'whoami        who is this',
   'history       show past commands',
@@ -240,11 +247,24 @@ function Terminal() {
         if (!arg) {
           lines.push('usage: find <term>')
         } else {
-          const matches = ENTRIES.filter((name) => name.includes(arg.toLowerCase()))
-          lines.push(
-            matches.length ? matches.map(entryLabel).join('  ') : `find: no matches for "${arg}"`
-          )
+          const term = arg.toLowerCase()
+          const matches = ENTRIES.filter((name) => name.includes(term))
+          const projectMatches = Object.keys(PROJECT_DETAILS).filter((name) => name.includes(term))
+          if (matches.length) lines.push(matches.map(entryLabel).join('  '))
+          for (const name of projectMatches) {
+            lines.push(`Projects/${name}`, ...PROJECT_DETAILS[name].map((line) => `  ${line}`))
+          }
+          if (!matches.length && !projectMatches.length) lines.push(`find: no matches for "${arg}"`)
         }
+        break
+      }
+      case 'echo': {
+        const name = normalizeArg(arg).replace(/\s+/g, '-')
+        lines.push(
+          ...(Object.hasOwn(PROJECT_DETAILS, name)
+            ? PROJECT_DETAILS[name].map((line) => `  ${line}`)
+            : [arg || BLANK])
+        )
         break
       }
       case 'pwd':
