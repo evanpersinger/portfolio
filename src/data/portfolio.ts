@@ -24,6 +24,8 @@ export interface Project {
   tech: string[]
   link: string
   image?: string
+  // Extra lines only the terminal prints (`find` / `echo` with the project name).
+  details: string[]
 }
 
 export const experiences: Experience[] = [
@@ -69,21 +71,40 @@ export const projects: Project[] = [
     description: 'Compares grocery prices.\nTake a photo of a receipt and upload it to add your items.\nReceipts are processed by an LLM.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite'],
     link: 'https://github.com/evanpersinger/price-tracking',
-    image: '/projects/price-tracking.png'
+    image: '/projects/price-tracking.png',
+    details: [
+      'Tracks grocery prices per store in Canada and the USA so the same item can be compared across stores.',
+      'Receipts are read by a local vision model through Ollama, so there are no paid API keys.',
+      'You review and edit what the model read before anything is saved.',
+      'Pages for store prices, gas prices, the cheapest items per store, and price history graphs.',
+      'Items are compared per gram or per ml. Saving is rejected if the price per unit jumps more than 5x, which catches a wrongly typed size.'
+    ]
   },
   {
     title: 'File Converter',
     description: 'Converts files between various file formats.\nLLM powered scripts turn PDFs into Markdown.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript'],
     link: 'https://github.com/evanpersinger/file-converter',
-    image: '/projects/file-converter.jpg'
+    image: '/projects/file-converter.jpg',
+    details: [
+      'Converts PDF, Word, PowerPoint, Markdown, HTML, Excel, CSV, JSON, images and SVG between formats, and combines several files into one.',
+      'The LLM tab turns PDFs and handwriting photos into Markdown using local Ollama, OpenAI or Anthropic.',
+      'Every conversion is its own script, and each can run on its own.',
+      'The web UI runs up to 4 conversions at once, and files are capped at 100 MB.'
+    ]
   },
   {
     title: 'Typing Practice',
     description: 'A typing trainer that focuses on the words you misspell.\nAn LLM writes practice sentences around them.\nIf you spell a word correctly 10 times in a row, it gets removed from your weak word list.',
     tech: ['Python', 'FastAPI', 'React', 'TypeScript', 'SQLite', 'Tailwind CSS'],
     link: 'https://github.com/evanpersinger/typing-practice',
-    image: '/projects/typing-practice.png'
+    image: '/projects/typing-practice.png',
+    details: [
+      'Keeps a list of words you misspell. An LLM writes 9 practice sentences around your 7 weakest.',
+      'A word graduates after 10 correct spellings in a row, and comes back for re-tests after 1, 3, 7 and 21 days.',
+      'Three modes: Practice, Free Type (a common-words board with wpm and accuracy) and Punctuation (11 punctuation features).',
+      'Runs on a local Ollama model by default, or Anthropic or OpenAI with an API key.'
+    ]
   }
 ]
 
