@@ -52,7 +52,7 @@ export const experiences: Experience[] = [
       'Built a Sabre API pipeline that matches a client’s hotel lists to Sabre hotel codes by location and name, with match scoring.',
       'Wrote scripts to clean and normalize a client’s historical air, hotel, and car data. They fix cost formatting, expand rates, parse routes and airports, and validate the schema.'
     ],
-    technologies: ['Python', 'FastAPI', 'AWS Postgres', 'PostgreSQL', 'SQL', 'Docker']
+    technologies: ['Python', 'FastAPI', 'AWS (RDS)', 'PostgreSQL', 'SQL', 'Docker']
   }
 ]
 
@@ -109,13 +109,13 @@ export const projects: Project[] = [
 ]
 
 // Order drives the TechStack row layout together with its .tech-break markers:
-// row 1: Python, SQL, Jupyter, Git | row 2: AWS Postgres, PostgreSQL | row 3: Docker, FastAPI, TypeScript
+// row 1: Python, SQL, Jupyter, Git | row 2: AWS (RDS), PostgreSQL | row 3: Docker, FastAPI, TypeScript
 export const technologies = [
   'Python',
   'SQL',
   'Jupyter',
   'Git',
-  'AWS Postgres',
+  'AWS (RDS)',
   'PostgreSQL',
   'Docker',
   'FastAPI',

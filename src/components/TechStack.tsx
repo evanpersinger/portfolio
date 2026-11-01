@@ -10,7 +10,7 @@ const ICONS: Record<(typeof technologies)[number], IconType> = {
   SQL: FaDatabase,
   Jupyter: SiJupyter,
   Git: SiGit,
-  'AWS Postgres': FaAws,
+  'AWS (RDS)': FaAws,
   PostgreSQL: SiPostgresql,
   Docker: SiDocker,
   FastAPI: SiFastapi,
@@ -26,7 +26,7 @@ function TechStack() {
           const Icon = ICONS[name]
           return (
             <React.Fragment key={name}>
-              {(name === 'AWS Postgres' || name === 'Docker') && <span className="tech-break" />}
+              {(name === 'AWS (RDS)' || name === 'Docker') && <span className="tech-break" />}
               <span className="tech-tag">
                 <Icon className="tech-icon" />
                 {name}

@@ -29,7 +29,7 @@
   font-size: 1.6rem;
 }
 
-/* Forces AWS Postgres (and the tags after it) onto a new row */
+/* Forces AWS (RDS) (and the tags after it) onto a new row */
 .tech-break {
   flex-basis: 100%;
   height: 0;
