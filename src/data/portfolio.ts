@@ -61,7 +61,7 @@ export const education: Education[] = [
     school: 'Western University',
     major: 'B.S. in Data Science',
     location: 'London, Ontario, Canada',
-    graduation: 'Expected 2028'
+    graduation: 'January 2028'
   }
 ]
 
