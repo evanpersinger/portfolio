@@ -3,8 +3,15 @@
 .github-activity {
   max-width: 1560px;
   padding-top: 0;
+  padding-bottom: 40px;
   overflow-x: auto;
   min-height: 190px;
+}
+
+@media (max-width: 768px) {
+  .github-activity {
+    padding-bottom: 60px;
+  }
 }
 
 /* The calendar grid carries a viewBox, so overriding its fixed width attribute
