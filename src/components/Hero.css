@@ -41,6 +41,14 @@
   margin-top: -35px;
 }
 
+/* Lifts the photo and the text column together. `top` moves them visually
+   without changing the row's layout, so the terminal in the same row stays put. */
+.hero-left,
+.hero-right {
+  position: relative;
+  top: -15px;
+}
+
 /* No border here: a border would sit between the photo and the green ring and
    read as a gap. The ring is the box-shadow, flush against the image. */
 .profile-image {
@@ -241,6 +249,11 @@
     flex-wrap: nowrap;
     gap: 30px;
     align-items: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    top: 0;
   }
 
   .hero-left {
