@@ -36,8 +36,8 @@ export const experiences: Experience[] = [
     location: 'San Francisco, CA',
     period: 'January 2026 - August 2026',
     description: [
-      'Built an opt-in feature that rebooks hotel stays at a lower rate when the price drops. A daily job re-prices refundable bookings through Sabre and only rebooks if the free-cancel window is still open, the property is the same, and the savings are big enough. Added an admin dashboard that shows price history for each stay.',
-      'Reduced AWS costs by about $500/month by moving data from AWS to encrypted DuckDB files, and kept the analytics agent working against it.',
+      'Built an opt-in feature that rebooks hotel stays at a lower rate when the price drops. A daily Sabre re-pricing job rebooks only if the free-cancel window is open, the property is the same, and the savings are big enough, with an admin dashboard showing price history per stay.',
+      'Reduced AWS costs by about $500/month by moving data from AWS to encrypted DuckDB files, and switched the analytics agent to query the new files.',
       'Built two flight fare features in the travel agent. It recommends the lowest logical fare and offers it as a cheaper alternative the user can accept or decline. I also added an opt-in “Show all fares” view that goes from one fare per cabin to the full set of branded fares.'
     ],
     technologies: ['Python', 'TypeScript', 'Docker', 'FastAPI', 'PostgreSQL']
@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     location: 'San Francisco, CA',
     period: 'May 2025 - August 2025',
     description: [
-      'Utilized Python and SQL to build a custom AI analytics agent enabling clients to query complex travel datasets using natural language.',
+      'Built a custom AI analytics agent in Python and SQL that lets clients query complex travel datasets in plain English.',
       'Built a Sabre API pipeline that matches a client’s hotel lists to Sabre hotel codes by location and name, with match scoring.',
       'Wrote scripts to clean and normalize a client’s historical air, hotel, and car data. They fix cost formatting, expand rates, parse routes and airports, and validate the schema.'
     ],
