@@ -4,7 +4,7 @@
    to beat the site-wide `section { max-width: 1060px }`. */
 .hero {
   padding-top: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 0;
   max-width: none;
 }
 
@@ -46,7 +46,7 @@
 .hero-left,
 .hero-right {
   position: relative;
-  top: -15px;
+  top: -65px;
 }
 
 /* No border here: a border would sit between the photo and the green ring and
