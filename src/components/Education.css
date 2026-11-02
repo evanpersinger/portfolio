@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-.timeline-item {
+.timeline-item:not(:last-child) {
   margin-bottom: 40px;
 }
 
