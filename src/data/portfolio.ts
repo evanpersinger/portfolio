@@ -109,7 +109,7 @@ export const projects: Project[] = [
 ]
 
 // Order drives the TechStack row layout together with its .tech-break markers:
-// row 1: Python, SQL, Jupyter, Git | row 2: AWS (RDS), PostgreSQL | row 3: Docker, FastAPI, TypeScript, React
+// row 1: Python, SQL, Jupyter, Git | row 2: AWS (RDS), PostgreSQL, React | row 3: Docker, FastAPI, TypeScript
 export const technologies = [
   'Python',
   'SQL',
@@ -117,8 +117,8 @@ export const technologies = [
   'Git',
   'AWS (RDS)',
   'PostgreSQL',
+  'React',
   'Docker',
   'FastAPI',
-  'TypeScript',
-  'React'
+  'TypeScript'
 ] as const
