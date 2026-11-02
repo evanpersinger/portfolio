@@ -11,8 +11,10 @@ export default function Page() {
       <GitHubActivity />
       <div className="education-experience-container">
         <Experience />
-        <Education />
-        <TechStack />
+        <div className="education-techstack-column">
+          <Education />
+          <TechStack />
+        </div>
       </div>
     </>
   )

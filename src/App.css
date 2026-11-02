@@ -29,33 +29,43 @@ main > :last-child {
 
 .education-experience-container {
   display: grid;
-  /* 1.82fr lands TechStack on ~580px at the 1700px max-width. Measured in Inter,
-     row 1 of the tech stack needs 512px of inner space, and 560px only gave 508,
-     so the floor has headroom on purpose. minmax lets all three columns shrink
-     together instead of TechStack bullying the other two. */
-  grid-template-columns: 2fr 1fr minmax(580px, 1.82fr);
+  /* Experience on the left, Education stacked over Tech Stack on the right. The
+     right column has a floor so the tech stack pills fit: measured in Inter, row 1
+     needs 512px of inner space, and 560px only gave 508, so the floor has headroom
+     on purpose. */
+  grid-template-columns: 2fr minmax(580px, 1.82fr);
   gap: 32px;
   max-width: none;
   margin: 0;
   padding: 0 0 80px;
 }
 
-.education-experience-container > section {
+.education-techstack-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.education-experience-container section {
   padding: 0;
   max-width: none;
 }
 
-/* TechStack.css steps the pills down at this same width, so the 4 / 2 / 2 rows
+/* TechStack.css steps the pills down at this same width, so the 4 / 3 / 3 rows
    still fit once the column floor drops. */
 @media (max-width: 1500px) {
   .education-experience-container {
-    grid-template-columns: 2fr 1fr minmax(480px, 1.82fr);
+    grid-template-columns: 2fr minmax(480px, 1.82fr);
   }
 }
 
 @media (max-width: 1200px) {
   .education-experience-container {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .education-techstack-column {
     gap: 30px;
   }
 }
