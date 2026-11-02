@@ -78,7 +78,7 @@
   border: 1px solid var(--border-color);
 }
 
-/* Below this the 400px terminal leaves the cards a column too narrow for the
+/* Below this the 340px terminal leaves the cards a column too narrow for the
    title and the GitHub icon, so the terminal drops under them. */
 @media (max-width: 1100px) {
   .projects-layout {

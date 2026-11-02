@@ -29,7 +29,7 @@
 }
 
 @media (max-width: 768px) {
-  /* minmax(0, ...) because a plain 1fr won't shrink below the 400px terminal,
+  /* minmax(0, ...) because a plain 1fr won't shrink below the 340px terminal,
      which pushed the page sideways on narrow phones. */
   .pets-grid {
     grid-template-columns: minmax(0, 1fr);
