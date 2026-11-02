@@ -230,13 +230,30 @@
   margin-left: 4px;
 }
 
+/* From 900px to 1339px the terminal wraps onto its own row and the text column
+   is the top of the first row, so the lift above would push the name up into the
+   nav bar. Not lifted here, the name sits as far below the nav as it does with
+   the terminal beside it. (Below 900px the text column wraps under the photo and
+   clears the nav anyway.) */
+@media (min-width: 900px) and (max-width: 1339px) {
+  .hero-right {
+    top: 0;
+  }
+}
+
 /* Wide viewports have room, so the photo and text column scale up together.
    `zoom` scales every size in them (images, fonts, icons, gaps) with one number.
-   Below 1700px the terminal would drop onto its own row, so it stays at 1. */
+   Below 1700px the terminal would drop onto its own row, so it stays at 1.
+   The text column's lift is cut down here: zoom scales the 65px up to about 85px,
+   which put the name in line with the nav buttons. */
 @media (min-width: 1700px) {
   .hero-left,
   .hero-right {
     zoom: 1.3;
+  }
+
+  .hero-right {
+    top: -12px;
   }
 }
 
