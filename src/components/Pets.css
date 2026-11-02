@@ -29,8 +29,10 @@
 }
 
 @media (max-width: 768px) {
+  /* minmax(0, ...) because a plain 1fr won't shrink below the 400px terminal,
+     which pushed the page sideways on narrow phones. */
   .pets-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   /* Last on phones, like the terminal on the other pages. */
