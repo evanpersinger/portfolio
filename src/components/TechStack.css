@@ -4,19 +4,24 @@
   padding: 20px 0 0 0;
 }
 
+/* The space between rows is a vertical margin on each pill, not a row-gap: the
+   .tech-break spacer is a flex line of its own, so a row-gap would be added twice
+   at every forced break. The box's top and bottom padding is smaller by the same
+   margin, so the outer spacing is unchanged. */
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  column-gap: 12px;
   justify-content: center;
   background-color: var(--card-bg);
-  padding: 16px;
+  padding: 10px 16px;
 }
 
 .tech-tag {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
   padding: 10px 17px;
+  margin: 6px 0;
   border-radius: 20px;
   font-size: 1.2rem;
   border: 1px solid var(--border-color);
@@ -39,11 +44,13 @@
    floor the full-size pills no longer fit four across, so row 1 would wrap. */
 @media (max-width: 1500px) {
   .tech-tags {
-    gap: 10px;
+    column-gap: 10px;
+    padding: 11px 16px;
   }
 
   .tech-tag {
     padding: 8px 13px;
+    margin: 5px 0;
     font-size: 0.95rem;
     gap: 6px;
   }
