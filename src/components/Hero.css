@@ -230,12 +230,12 @@
   margin-left: 4px;
 }
 
-/* From 900px to 1339px the terminal wraps onto its own row and the text column
+/* From 900px to 1279px the terminal wraps onto its own row and the text column
    is the top of the first row, so the lift above would push the name up into the
    nav bar. Not lifted here, the name sits as far below the nav as it does with
    the terminal beside it. (Below 900px the text column wraps under the photo and
    clears the nav anyway.) */
-@media (min-width: 900px) and (max-width: 1339px) {
+@media (min-width: 900px) and (max-width: 1279px) {
   .hero-right {
     top: 0;
   }
