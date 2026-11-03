@@ -31,9 +31,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Evan Persinger',
+    title: 'Evan Persinger | Data Science',
+    description: 'Evan Persinger - Data Science Student Portfolio',
+    url: siteUrl,
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
   },
 }
 
