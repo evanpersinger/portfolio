@@ -30,10 +30,11 @@ main > :last-child {
 .education-experience-container {
   display: grid;
   /* Experience on the left, Education stacked over Tech Stack on the right. The
-     right column has a floor so the tech stack pills fit: measured in Inter, row 1
-     needs 512px of inner space, and 560px only gave 508, so the floor has headroom
-     on purpose. */
-  grid-template-columns: 2fr minmax(580px, 1.82fr);
+     right column is a fixed width, just what the tech stack pills need, so the
+     boxes in it don't stretch past their content: measured in Inter, row 1 needs
+     512px of inner space, and 560px only gave 508, so 580px has headroom on
+     purpose. Experience takes the rest. */
+  grid-template-columns: minmax(0, 1fr) 580px;
   gap: 32px;
   max-width: none;
   margin: 0;
@@ -52,10 +53,10 @@ main > :last-child {
 }
 
 /* TechStack.css steps the pills down at this same width, so the 4 / 3 / 3 rows
-   still fit once the column floor drops. */
+   still fit in the narrower column. */
 @media (max-width: 1500px) {
   .education-experience-container {
-    grid-template-columns: 2fr minmax(480px, 1.82fr);
+    grid-template-columns: minmax(0, 1fr) 480px;
   }
 }
 
