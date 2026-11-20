@@ -1,7 +1,7 @@
 // Used by the metadata, sitemap and robots. Change it here when the domain does.
 export const siteUrl = 'https://portfolio-sable-seven-14.vercel.app'
 
-export interface Experience {
+interface Experience {
   title: string
   plane?: boolean
   company: string
@@ -11,14 +11,14 @@ export interface Experience {
   technologies: string[]
 }
 
-export interface Education {
+interface Education {
   school: string
   major: string
   location: string
   graduation: string
 }
 
-export interface Project {
+interface Project {
   title: string
   description: string
   tech: string[]
